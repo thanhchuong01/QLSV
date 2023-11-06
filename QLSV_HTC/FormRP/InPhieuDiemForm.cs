@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
-using QLDSV_HTC.Reports;
+using QLSV_HTC.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +12,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLDSV_HTC.ReportForms
+namespace QLSV_HTC.FormRP
 {
-    public partial class InPhieuDiemForm : DevExpress.XtraEditors.XtraForm
+    public partial class InPhieuDiem : DevExpress.XtraEditors.XtraForm
     {
-        public InPhieuDiemForm()
+        public InPhieuDiem()
         {
             InitializeComponent();
         }

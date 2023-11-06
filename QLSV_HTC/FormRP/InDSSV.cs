@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
-using QLSV_HTC.Report;
+using QLSV_HTC.Reports;
 using System;
 using System.Data;
 using System.Text.RegularExpressions;

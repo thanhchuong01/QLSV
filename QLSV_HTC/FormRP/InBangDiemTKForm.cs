@@ -11,11 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLSV_HTC.Forms
+namespace QLSV_HTC.FormRP
 {
-    public partial class InBangDiemTKForm : DevExpress.XtraEditors.XtraForm
+    public partial class InBangDiemTongKet : DevExpress.XtraEditors.XtraForm
     {
-        public InBangDiemTKForm()
+        public InBangDiemTongKet()
         {
             InitializeComponent();
         }

@@ -94,12 +94,6 @@ namespace QLSV_HTC
             ShowMdiChildren(typeof(MonHocForm));
         }
 
-
-       // private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-         //  {
-         //     ShowMdiChildren(typeof(InDSLOPTINCHI));
-       // }
-
         private void barBtnLTC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ShowMdiChildren(typeof(MoLopTinChiForm));
@@ -131,7 +125,7 @@ namespace QLSV_HTC
 
        private void BtnInBDMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
        {
-              //  ShowMdiChildren(typeof(InDiemForm_RP));
+                ShowMdiChildren(typeof(InDiemForm));
        }
                    
        private void BtnInBDTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -139,9 +133,10 @@ namespace QLSV_HTC
                 ShowMdiChildren(typeof(InBangDiemTongKet));
        }
 
-        private void BtnInDSL_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       
+        private void BtnInDSLTC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            ShowMdiChildren(typeof(InDSLOPTINCHI));
         }
 
         private void barBtnGV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -67,7 +67,7 @@ namespace QLSV_HTC.Reports
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "QLDSV_HTC.Properties.Settings.QLDSV_TCConnectionString";
+            this.sqlDataSource1.ConnectionName = "QLSV_HTC.Properties.Settings.QLSV_HTCConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "sp_InBangDiemTongKet";
             queryParameter1.Name = "@MALOP";

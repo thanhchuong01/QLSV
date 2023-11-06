@@ -35,7 +35,7 @@ namespace QLSV_HTC
             this.loginBtn = new DevExpress.XtraBars.BarButtonItem();
             this.logoutBtn = new DevExpress.XtraBars.BarButtonItem();
             this.BtnInDSSV = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnInDSL = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnInDSLTC = new DevExpress.XtraBars.BarButtonItem();
             this.BtnInPhieuDiem = new DevExpress.XtraBars.BarButtonItem();
             this.BtnInBDMH = new DevExpress.XtraBars.BarButtonItem();
             this.BtnInBDTK = new DevExpress.XtraBars.BarButtonItem();
@@ -80,7 +80,7 @@ namespace QLSV_HTC
             this.loginBtn,
             this.logoutBtn,
             this.BtnInDSSV,
-            this.BtnInDSL,
+            this.BtnInDSLTC,
             this.BtnInPhieuDiem,
             this.BtnInBDMH,
             this.BtnInBDTK,
@@ -133,16 +133,16 @@ namespace QLSV_HTC
             this.BtnInDSSV.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.BtnInDSSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnInDSSV_ItemClick);
             // 
-            // BtnInDSL
+            // BtnInDSLTC
             // 
-            this.BtnInDSL.Caption = "Danh sách lớp ";
-            this.BtnInDSL.Id = 5;
-            this.BtnInDSL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnInDSL.ImageOptions.Image")));
-            this.BtnInDSL.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnInDSL.ImageOptions.LargeImage")));
-            this.BtnInDSL.LargeWidth = 80;
-            this.BtnInDSL.Name = "BtnInDSL";
-            this.BtnInDSL.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.BtnInDSL.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnInDSL_ItemClick);
+            this.BtnInDSLTC.Caption = "Danh sách lớp tín chỉ";
+            this.BtnInDSLTC.Id = 5;
+            this.BtnInDSLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnInDSL.ImageOptions.Image")));
+            this.BtnInDSLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnInDSL.ImageOptions.LargeImage")));
+            this.BtnInDSLTC.LargeWidth = 80;
+            this.BtnInDSLTC.Name = "BtnInDSLTC";
+            this.BtnInDSLTC.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.BtnInDSLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnInDSLTC_ItemClick);
             // 
             // BtnInPhieuDiem
             // 
@@ -316,7 +316,7 @@ namespace QLSV_HTC
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInDSSV);
-            this.ribbonPageGroup3.ItemLinks.Add(this.BtnInDSL);
+            this.ribbonPageGroup3.ItemLinks.Add(this.BtnInDSLTC);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInPhieuDiem);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInBDMH);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInBDTK);
@@ -419,7 +419,7 @@ namespace QLSV_HTC
         private DevExpress.XtraBars.BarButtonItem loginBtn;
         private DevExpress.XtraBars.BarButtonItem logoutBtn;
         private DevExpress.XtraBars.BarButtonItem BtnInDSSV;
-        private DevExpress.XtraBars.BarButtonItem BtnInDSL;
+        private DevExpress.XtraBars.BarButtonItem BtnInDSLTC;
         private DevExpress.XtraBars.BarButtonItem BtnInPhieuDiem;
         private DevExpress.XtraBars.BarButtonItem BtnInBDTK;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;

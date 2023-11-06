@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
-using QLSV_HTC.Report;
+using QLSV_HTC.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLDSV_HTC.FormRP
+namespace QLSV_HTC.FormRP
 {
     public partial class InDSLOPTINCHI : DevExpress.XtraEditors.XtraForm
     {

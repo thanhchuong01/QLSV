@@ -81,7 +81,7 @@ namespace QLSV_HTC.Reports
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "HTKN_QLDSV_TC_Connection";
+            this.sqlDataSource1.ConnectionName = "HTKN_QLSV_HTC_Connection";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "sp_InBangDiemMonHoc";
             queryParameter1.Name = "@NIENKHOA";
