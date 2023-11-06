@@ -60,7 +60,7 @@ namespace QLSV_HTC
 
 
         /**
-         * Thông tin Khoa đã đăng nhập (VT-CNTT-PKT)
+         * Thông tin Khoa đã đăng nhập (VT-CNTT)
          */
         public static string MaKhoa = "";
 

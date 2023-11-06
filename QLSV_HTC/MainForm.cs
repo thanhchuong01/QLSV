@@ -1,5 +1,5 @@
 ﻿using QLSV_HTC.Forms;
-//using QLSV_HTC.ReportForms;
+using QLSV_HTC.FormRP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QLSV_HTC.Reports;
 
 namespace QLSV_HTC
 {
@@ -52,6 +53,14 @@ namespace QLSV_HTC
             statusStrip1.Items[2].Text = string.Format("NHÓM: {0}", Program.AuthGroup);
 
             //Hiện tính năng cho mỗi quyền khác nhau
+            if (Program.AuthGroup == "SV")
+            {
+                usersGroup.Visible = false;
+            }
+            if (Program.AuthGroup == "PGV")
+            {
+                barBtnDiem.Enabled = false;
+            }
         }
 
         private void ShowMdiChildren(Type fType)
@@ -69,80 +78,76 @@ namespace QLSV_HTC
             form.Show();
         }
 
-     // private void registerbtn_itemclick(object sender, devexpress.xtrabars.itemclickeventargs e)
-       // {
-      //    showmdichildren(typeof(addloginform));
-      // }
-
-     //   private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-       // {
-       //     ShowMdiChildren(typeof(SinhVienForm));
-       // }
-
-    //    private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-    //    {
-    //        ShowMdiChildren(typeof(MonHocForm));
-    //    }
-
-     //   private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-    //    {
-     //       ShowMdiChildren(typeof(InDSLOPTINCHI));
-       // }
-
-     //   private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-     //   {
-     //       ShowMdiChildren(typeof(MoLopTinChiForm));
+        private void registerBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(AddLoginForm));
         }
-    /** 
-        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+
+        private void barBtnSV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(SinhVienForm));
+        }
+
+        private void barBtnMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(MonHocForm));
+        }
+
+
+       // private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+         //  {
+         //     ShowMdiChildren(typeof(InDSLOPTINCHI));
+       // }
+
+        private void barBtnLTC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(MoLopTinChiForm));
+        }
+        private void barBtnLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ShowMdiChildren(typeof(LopForm));
         }
+        
+        private void barBtnDiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+            {
+                ShowMdiChildren(typeof(DiemForm));
+            }
+        
+       private void barBtnDKLTC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       {
+                ShowMdiChildren(typeof(DangKyLTCForm));
+       }
 
-        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       private void BtnInDSSV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       {
+               ShowMdiChildren(typeof(InDSSV));
+       }
+
+       private void BtnInPhieuDiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       {
+            ShowMdiChildren(typeof(InPhieuDiem));
+       }
+
+       private void BtnInBDMH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       {
+              //  ShowMdiChildren(typeof(InDiemForm_RP));
+       }
+                   
+       private void BtnInBDTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       {
+                ShowMdiChildren(typeof(InBangDiemTongKet));
+       }
+
+        private void BtnInDSL_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowMdiChildren(typeof(DiemForm));
+
         }
 
-        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barBtnGV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowMdiChildren(typeof(DangKyLTCForm));
-        }
-
-        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(HocPhiForm));
-        }
-
-        private void InDSSVBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(InDSSV));
-        }
-
-        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(InPhieuDiemForm));
-        }
-
-        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(InDiemForm));
-        }
-
-        private void inHocPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(InDSDongHPForm));
-        }
-
-        private void inBDTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(InBangDiemTKForm));
-        }
-
-        private void barButtonItem3_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ShowMdiChildren(typeof(DangKyLTCForm));
 
         }
-    } **/
+    } 
+    
 }

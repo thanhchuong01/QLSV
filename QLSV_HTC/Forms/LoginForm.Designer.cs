@@ -78,21 +78,19 @@ namespace QLSV_HTC.Forms
             this.dataLayoutControl1.Controls.Add(this.checkEdit1);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(422, 0, 650, 400);
             this.dataLayoutControl1.Root = this.Root;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(436, 183);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(374, 149);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // svLogin
             // 
-            this.svLogin.Location = new System.Drawing.Point(219, 117);
-            this.svLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.svLogin.Location = new System.Drawing.Point(180, 99);
             this.svLogin.Name = "svLogin";
             this.svLogin.Properties.Caption = "Đăng nhập SV";
-            this.svLogin.Size = new System.Drawing.Size(212, 24);
+            this.svLogin.Size = new System.Drawing.Size(172, 20);
             this.svLogin.StyleController = this.dataLayoutControl1;
             this.svLogin.TabIndex = 11;
             this.svLogin.CheckedChanged += new System.EventHandler(this.svLogin_CheckedChanged);
@@ -101,18 +99,16 @@ namespace QLSV_HTC.Forms
             // 
             this.cmbServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbServer.FormattingEnabled = true;
-            this.cmbServer.Location = new System.Drawing.Point(106, 31);
-            this.cmbServer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbServer.Location = new System.Drawing.Point(84, 26);
             this.cmbServer.Name = "cmbServer";
-            this.cmbServer.Size = new System.Drawing.Size(325, 24);
+            this.cmbServer.Size = new System.Drawing.Size(268, 21);
             this.cmbServer.TabIndex = 10;
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(219, 145);
-            this.closeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.closeBtn.Location = new System.Drawing.Point(180, 123);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(212, 27);
+            this.closeBtn.Size = new System.Drawing.Size(172, 22);
             this.closeBtn.StyleController = this.dataLayoutControl1;
             this.closeBtn.TabIndex = 7;
             this.closeBtn.Text = "Close";
@@ -120,10 +116,9 @@ namespace QLSV_HTC.Forms
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(5, 145);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.loginBtn.Location = new System.Drawing.Point(5, 123);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(210, 27);
+            this.loginBtn.Size = new System.Drawing.Size(171, 22);
             this.loginBtn.StyleController = this.dataLayoutControl1;
             this.loginBtn.TabIndex = 6;
             this.loginBtn.Text = "Login";
@@ -131,36 +126,33 @@ namespace QLSV_HTC.Forms
             // 
             // passwordText
             // 
-            this.passwordText.Location = new System.Drawing.Point(106, 89);
-            this.passwordText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.passwordText.Location = new System.Drawing.Point(84, 75);
             this.passwordText.Name = "passwordText";
             this.passwordText.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordText.Properties.Appearance.Options.UseFont = true;
             this.passwordText.Properties.PasswordChar = '*';
-            this.passwordText.Size = new System.Drawing.Size(325, 24);
+            this.passwordText.Size = new System.Drawing.Size(268, 20);
             this.passwordText.StyleController = this.dataLayoutControl1;
             this.passwordText.TabIndex = 5;
             // 
             // usernameText
             // 
-            this.usernameText.Location = new System.Drawing.Point(106, 61);
-            this.usernameText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.usernameText.Location = new System.Drawing.Point(84, 51);
             this.usernameText.Name = "usernameText";
             this.usernameText.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameText.Properties.Appearance.Options.UseFont = true;
             this.usernameText.Properties.Mask.EditMask = "(\\p{Lu}|[0-9])+";
             this.usernameText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.usernameText.Size = new System.Drawing.Size(325, 24);
+            this.usernameText.Size = new System.Drawing.Size(268, 20);
             this.usernameText.StyleController = this.dataLayoutControl1;
             this.usernameText.TabIndex = 4;
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(5, 117);
-            this.checkEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit1.Location = new System.Drawing.Point(5, 99);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Hiện mật khẩu";
-            this.checkEdit1.Size = new System.Drawing.Size(210, 24);
+            this.checkEdit1.Size = new System.Drawing.Size(171, 20);
             this.checkEdit1.StyleController = this.dataLayoutControl1;
             this.checkEdit1.TabIndex = 9;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
@@ -173,7 +165,7 @@ namespace QLSV_HTC.Forms
             this.layoutControlGroup1});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(436, 183);
+            this.Root.Size = new System.Drawing.Size(357, 150);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -189,52 +181,51 @@ namespace QLSV_HTC.Forms
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(436, 183);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(357, 150);
             this.layoutControlGroup1.Text = "                         QUẢN LÍ SINH VIÊN HỆ TÍN CHỈ";
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.usernameText;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 30);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(430, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(351, 24);
             this.layoutControlItem1.Text = "Tên đăng nhập:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(98, 17);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.passwordText;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 58);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 49);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(430, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(351, 24);
             this.layoutControlItem2.Text = "Mật khẩu:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(98, 17);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.closeBtn;
-            this.layoutControlItem4.Location = new System.Drawing.Point(214, 114);
+            this.layoutControlItem4.Location = new System.Drawing.Point(175, 97);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(216, 37);
+            this.layoutControlItem4.Size = new System.Drawing.Size(176, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.loginBtn;
-            // this.layoutControlItem3.ImageOptions.Image = global::QLSV_HTC.Properties.Resources.login;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 114);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 97);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(214, 37);
+            this.layoutControlItem3.Size = new System.Drawing.Size(175, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.checkEdit1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 86);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(214, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(175, 24);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -243,27 +234,28 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem5.Control = this.cmbServer;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(430, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(351, 25);
             this.layoutControlItem5.Text = "Máy chủ:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(98, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(76, 13);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.svLogin;
-            this.layoutControlItem7.Location = new System.Drawing.Point(214, 86);
+            this.layoutControlItem7.Location = new System.Drawing.Point(175, 73);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(216, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(176, 24);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AcceptButton = this.loginBtn;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 183);
+            this.ClientSize = new System.Drawing.Size(374, 149);
             this.Controls.Add(this.dataLayoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

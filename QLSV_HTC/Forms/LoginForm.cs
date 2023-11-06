@@ -69,7 +69,7 @@ namespace QLSV_HTC.Forms
             if (svLogin.Checked)
             {
                 
-                string lenh = string.Format("SELECT HO, TEN, MALOP, DANGHIHOC,MASV, PASSWORD FROM SINHVIEN WHERE MASV = N'{0}'", Program.AuthLogin);
+                string lenh = string.Format("SELECT HO, TEN, MALOP, DANGHIHOC, MASV, PASSWORD FROM SINHVIEN WHERE MASV = N'{0}'", Program.AuthLogin);
                 Program.MyReader = Program.ExecSqlDataReader(lenh);
                 if (Program.MyReader == null || !Program.MyReader.HasRows)
                 {
@@ -102,7 +102,7 @@ namespace QLSV_HTC.Forms
 
                 Program.AuthUserID = Program.AuthLogin;
                 Program.AuthHoten = Program.MyReader.GetString(0) + " " + Program.MyReader.GetString(1);
-                Program.AuthGroup = Program.MyReader.GetString(2);
+                //Program.AuthGroup = "SV";
                 Program.MyReader.Close();
             }
             else
@@ -141,12 +141,7 @@ namespace QLSV_HTC.Forms
                 //{
                 //    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
                 //}
-
-                if (Program.AuthGroup == "PGV")
-                {
-                    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
-                }
-                else if (Program.AuthGroup == "KHOA")
+                if (Program.AuthGroup == "KHOA")
                 {
                     Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
                 }
