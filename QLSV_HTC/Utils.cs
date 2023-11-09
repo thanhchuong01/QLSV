@@ -29,7 +29,7 @@ namespace QLSV_HTC
             }
 
             Program.ServerName = cmbKhoa.SelectedValue.ToString();
-            Program.MaKhoa = Utils.GetMaKhoa(cmbKhoa.Text);
+           
             try
             {
                 Program.KetNoi();
@@ -47,15 +47,11 @@ namespace QLSV_HTC
         {
             //MessageBox.Show("sdfsd", tenkhoa);
             string ShortName = "";
-
-            if (tenkhoa.Length > 9)
-            {
-                // Sử dụng phương thức Substring để cắt bỏ 9 ký tự đầu
-                ShortName=tenkhoa.Substring(9);
-            }
-            //MessageBox.Show("ShortName", ShortName);
-
-            //Array.ForEach(tenkhoa.Split(' '), s => ShortName += s[0]);
+            string query = string.Format(" SELECT MAKHOA FROM KHOA WHERE TENKHOA = N'{0}' ", tenkhoa.ToString());
+            Program.MyReader = Program.ExecSqlDataReader(query);
+            Program.MyReader.Read();
+            ShortName = Program.MyReader.GetString(0);
+            Program.MyReader.Close();
             return ShortName;
         }
 

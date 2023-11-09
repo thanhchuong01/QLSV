@@ -27,7 +27,7 @@ namespace QLSV_HTC.Forms
             table.Columns.Add(new DataColumn("TENMH", typeof(string)));
             table.Columns.Add(new DataColumn("HO TEN", typeof(string)));
             table.Columns.Add(new DataColumn("NHOM", typeof(Int32)));
-            table.Columns.Add(new DataColumn("SOSVTOITHIEU", typeof(Int32)));
+            table.Columns.Add(new DataColumn("SOSVTT", typeof(Int32)));
             table.Columns.Add(new DataColumn("SOLUONGCL", typeof(Int32)));
             table.Columns.Add(new DataColumn("MALTC", typeof(Int32)));
         }

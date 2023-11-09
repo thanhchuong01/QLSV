@@ -71,16 +71,16 @@ namespace QLSV_HTC.Forms
             DataTable dt = new DataTable();
             dt.Columns.Add("MALTC", typeof(int));
             dt.Columns.Add("MASV", typeof(string));
-            dt.Columns.Add("DIEM_CC", typeof(int));
-            dt.Columns.Add("DIEM_GK", typeof(float));
-            dt.Columns.Add("DIEM_CK", typeof(float));
+            dt.Columns.Add("DIEMCC", typeof(int));
+            dt.Columns.Add("DIEMGK", typeof(float));
+            dt.Columns.Add("DIEMCK", typeof(float));
 
             for (int i = 0; i < bdsTemp.Count; i++)
             {
                 string masv = ((DataRowView)bdsTemp[i])["MASV"].ToString();
-                string diemcc = ((DataRowView)bdsTemp[i])["DIEM_CC"].ToString();
-                string diemGK = ((DataRowView)bdsTemp[i])["DIEM_GK"].ToString();
-                string diemCK = ((DataRowView)bdsTemp[i])["DIEM_CK"].ToString();
+                string diemcc = ((DataRowView)bdsTemp[i])["DIEMCC"].ToString();
+                string diemGK = ((DataRowView)bdsTemp[i])["DIEMGK"].ToString();
+                string diemCK = ((DataRowView)bdsTemp[i])["DIEMCK"].ToString();
                 dt.Rows.Add(maltc, masv, diemcc, diemGK, diemCK);
             }
 
@@ -126,7 +126,7 @@ namespace QLSV_HTC.Forms
 
         private void gridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
-            if (gridView1.FocusedColumn.FieldName == "DIEM_CC")
+            if (gridView1.FocusedColumn.FieldName == "DIEMCC")
             {
                 int x = 0;
                 if (!int.TryParse(e.Value as String, out x))
@@ -146,10 +146,10 @@ namespace QLSV_HTC.Forms
                     btnSave.Enabled = btnHuy.Enabled = true;
                 }
             }
-            else if (gridView1.FocusedColumn.FieldName == "DIEM_GK" || gridView1.FocusedColumn.FieldName == "DIEM_CK")
+            else if (gridView1.FocusedColumn.FieldName == "DIEMGK" || gridView1.FocusedColumn.FieldName == "DIEMCK")
             {
                 var mess = "Điểm CK chỉ cho phép số thập phân từ 0-10";
-                if(gridView1.FocusedColumn.FieldName == "DIEM_GK")
+                if(gridView1.FocusedColumn.FieldName == "DIEMGK")
                 {
                     mess = "Điểm GK chỉ cho phép số thập phân từ 0-10";
                 }

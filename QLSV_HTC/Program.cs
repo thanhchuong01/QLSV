@@ -87,7 +87,7 @@ namespace QLSV_HTC
 
             Program.ConnStr = string.Format("Data Source={0};Initial Catalog={1};User ID={2};Password={3}", Program.ServerName, Program.Database, Program.ServerLogin, Program.ServerPassword);
             Program.Conn.ConnectionString = Program.ConnStr;
-
+          
             // mở đối tượng kết nối
             Program.Conn.Open();
         }

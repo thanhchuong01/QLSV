@@ -452,7 +452,7 @@ namespace QLSV_HTC.Forms
             this.colTENMH.Visible = true;
             this.colTENMH.VisibleIndex = 1;
             // 
-            // colSOTIET_LT
+            // colSOTIETLT
             // 
             this.colSOTIETLT.Caption = "Số tiết lý thuyết";
             this.colSOTIETLT.FieldName = "SOTIETLT";
@@ -462,7 +462,7 @@ namespace QLSV_HTC.Forms
             this.colSOTIETLT.Visible = true;
             this.colSOTIETLT.VisibleIndex = 2;
             // 
-            // colSOTIET_TH
+            // colSOTIETTH
             // 
             this.colSOTIETTH.Caption = "Số tiết thực hành";
             this.colSOTIETTH.FieldName = "SOTIETTH";

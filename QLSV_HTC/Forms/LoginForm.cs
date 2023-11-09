@@ -63,8 +63,6 @@ namespace QLSV_HTC.Forms
                 XtraMessageBox.Show(ex.Message, "Không thể kết nối!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
             
             if (svLogin.Checked)
             {
@@ -96,7 +94,6 @@ namespace QLSV_HTC.Forms
                     MessageBox.Show("Mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    // MessageBox.Show(Program.MyReader.GetString(0)+ Program.MyReader.GetString(1)+ Program.MyReader.GetString(2)+ Program.MyReader.GetString(4)+ Program.MyReader.GetString(5)+"  "+ Program.AuthPassword);
                     Program.MyReader.Close();
-
                     return;
                 }
 
@@ -112,7 +109,7 @@ namespace QLSV_HTC.Forms
                 Program.MyReader = Program.ExecSqlDataReader(sqlQuery);
                 if (Program.MyReader == null) return;
                 Program.MyReader.Read();
-
+          
                 try
                 {
                     Program.AuthUserID = Program.MyReader.GetString(0);

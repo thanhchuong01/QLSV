@@ -147,7 +147,9 @@ namespace QLSV_HTC.Forms
 
         private void SinhVienForm_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'dS.CHUYENNGANH' table. You can move, or remove it, as needed.
+            this.cHUYENNGANHTableAdapter.Fill(this.dS.CHUYENNGANH);
+
 
             //if (Program.AuthGroup == "PGV")
             //{

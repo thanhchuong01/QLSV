@@ -55,9 +55,6 @@ namespace QLSV_HTC.Forms
                     = panelControl4.Enabled
                     = value;
 
-
-
-
             }
         }
 
@@ -145,8 +142,8 @@ namespace QLSV_HTC.Forms
             position = bdsLOP.Position;
             state = "add";
             SetButtonState(true);
-            txtMaLop.Focus();
-            MessageBox.Show("sdfsd", Program.MaKhoa);
+            txtMaLop.Focus();       
+            Program.MaKhoa = Utils.GetMaKhoa(cmbKhoa.Text);
 
             if (txtMaKhoa.DataBindings.Count > 0)
             {
@@ -206,7 +203,7 @@ namespace QLSV_HTC.Forms
 
                 if (state == "edit")
                 {
-                    undoStack.Push(string.Format("UPDATE LOP SET TENLOP = N'{0}', KHOAHOC = N'{1}', MAKHOA = N'{2}' WHERE MALOP = N'{3}'", LopData.TenLop, LopData.NienKhoa, LopData.MaKhoa, LopData.MaLop));
+                    undoStack.Push(string.Format("UPDATE LOP SET TENLOP = N'{0}', NIENKHOA = N'{1}', MAKHOA = N'{2}' WHERE MALOP = N'{3}'", LopData.TenLop, LopData.NienKhoa, LopData.MaKhoa, LopData.MaLop));
                 }
             }
             catch (Exception ex)
@@ -250,7 +247,7 @@ namespace QLSV_HTC.Forms
                     this.LOPTableAdapter.Update(this.DS.LOP);
                     this.bdsLOP.ResetCurrentItem();
 
-                    undoStack.Push(string.Format("INSERT INTO LOP(MALOP, TENLOP, KHOAHOC, MAKHOA) values(N'{0}', N'{1}', N'{2}', N'{3}')", LopData.MaLop, LopData.TenLop, LopData.NienKhoa, LopData.MaKhoa));
+                    undoStack.Push(string.Format("INSERT INTO LOP(MALOP, TENLOP, NIENKHOA, MAKHOA) values(N'{0}', N'{1}', N'{2}', N'{3}')", LopData.MaLop, LopData.TenLop, LopData.NienKhoa, LopData.MaKhoa));
                 }
                 catch (Exception ex)
                 {

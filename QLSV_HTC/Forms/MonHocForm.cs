@@ -189,7 +189,7 @@ namespace QLSV_HTC.Forms
 
                 if(state == "edit")
                 {
-                    undoStack.Push(string.Format("UPDATE MONHOC SET TENMH = N'{0}', SOTIET_LT = {1}, SOTIET_TH = {2} WHERE MAMH = '{3}'", MonHocData.TenMonHoc, MonHocData.SoTietLT, MonHocData.SoTietTH, MonHocData.MaMonHoc));
+                    undoStack.Push(string.Format("UPDATE MONHOC SET TENMH = N'{0}', SOTIETLT = {1}, SOTIETTH = {2} WHERE MAMH = '{3}'", MonHocData.TenMonHoc, MonHocData.SoTietLT, MonHocData.SoTietTH, MonHocData.MaMonHoc));
                 }
             }
             catch (Exception ex)
@@ -227,7 +227,7 @@ namespace QLSV_HTC.Forms
                     this.MONHOCTableAdapter.Update(this.DS.MONHOC);
                     this.bdsMONHOC.ResetCurrentItem();
 
-                    undoStack.Push(string.Format("INSERT INTO MONHOC(MAMH, TENMH, SOTIET_LT, SOTIET_TH) values('{0}', N'{1}', {2}, {3})", MonHocData.MaMonHoc, MonHocData.TenMonHoc, MonHocData.SoTietLT, MonHocData.SoTietTH));
+                    undoStack.Push(string.Format("INSERT INTO MONHOC(MAMH, TENMH, SOTIETLT, SOTIETTH) values('{0}', N'{1}', {2}, {3})", MonHocData.MaMonHoc, MonHocData.TenMonHoc, MonHocData.SoTietLT, MonHocData.SoTietTH));
                 }
                 catch (Exception ex)
                 {

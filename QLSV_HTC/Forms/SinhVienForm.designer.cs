@@ -101,6 +101,8 @@ namespace QLSV_HTC.Forms
             this.GC_Lop = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pASSWORDTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.NghiHoc_Label = new DevExpress.XtraEditors.LabelControl();
             this.dANGHIHOCCheckBox = new System.Windows.Forms.CheckBox();
@@ -111,6 +113,9 @@ namespace QLSV_HTC.Forms
             this.TextBox_Ho = new System.Windows.Forms.TextBox();
             this.TextBox_MaSV = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cHUYENNGANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cHUYENNGANHTableAdapter = new QLSV_HTC.DSTableAdapters.CHUYENNGANHTableAdapter();
+            this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             mASVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
@@ -138,6 +143,7 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_NgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_NgaySinh.Properties)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mASVLabel
@@ -608,7 +614,11 @@ namespace QLSV_HTC.Forms
             // lOPTableAdapter
             // 
             this.lOPTableAdapter.ClearBeforeFill = true;
-            //
+            // 
+            // dANGKYTableAdapter
+            // 
+            this.dANGKYTableAdapter.ClearBeforeFill = true;
+            // 
             // panelControl1
             // 
             this.panelControl1.AutoSize = true;
@@ -642,7 +652,8 @@ namespace QLSV_HTC.Forms
             this.colPHAI,
             this.colDIACHI,
             this.colNGAYSINH,
-            this.colDANGHIHOC});
+            this.colDANGHIHOC,
+            this.colMACN});
             this.gridView2.GridControl = this.GC_SV;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -781,6 +792,8 @@ namespace QLSV_HTC.Forms
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.label1);
+            this.panelControl3.Controls.Add(this.comboBox1);
             this.panelControl3.Controls.Add(pASSWORDLabel);
             this.panelControl3.Controls.Add(this.pASSWORDTextEdit);
             this.panelControl3.Controls.Add(this.NghiHoc_Label);
@@ -804,10 +817,31 @@ namespace QLSV_HTC.Forms
             this.panelControl3.Size = new System.Drawing.Size(508, 712);
             this.panelControl3.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 280);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Chuyên ngành";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bdsSINHVIEN, "MACN", true));
+            this.comboBox1.DataSource = this.cHUYENNGANHBindingSource;
+            this.comboBox1.DisplayMember = "TENCN";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(116, 277);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 21);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.ValueMember = "MACN";
+            // 
             // pASSWORDTextEdit
             // 
             this.pASSWORDTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "PASSWORD", true));
-            this.pASSWORDTextEdit.Location = new System.Drawing.Point(106, 233);
+            this.pASSWORDTextEdit.Location = new System.Drawing.Point(116, 233);
             this.pASSWORDTextEdit.MenuManager = this.barManager1;
             this.pASSWORDTextEdit.Name = "pASSWORDTextEdit";
             this.pASSWORDTextEdit.Size = new System.Drawing.Size(100, 20);
@@ -815,7 +849,7 @@ namespace QLSV_HTC.Forms
             // 
             // NghiHoc_Label
             // 
-            this.NghiHoc_Label.Location = new System.Drawing.Point(36, 278);
+            this.NghiHoc_Label.Location = new System.Drawing.Point(36, 312);
             this.NghiHoc_Label.Name = "NghiHoc_Label";
             this.NghiHoc_Label.Size = new System.Drawing.Size(68, 13);
             this.NghiHoc_Label.TabIndex = 17;
@@ -824,7 +858,7 @@ namespace QLSV_HTC.Forms
             // dANGHIHOCCheckBox
             // 
             this.dANGHIHOCCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsSINHVIEN, "DANGHIHOC", true));
-            this.dANGHIHOCCheckBox.Location = new System.Drawing.Point(126, 273);
+            this.dANGHIHOCCheckBox.Location = new System.Drawing.Point(121, 307);
             this.dANGHIHOCCheckBox.Name = "dANGHIHOCCheckBox";
             this.dANGHIHOCCheckBox.Size = new System.Drawing.Size(16, 24);
             this.dANGHIHOCCheckBox.TabIndex = 16;
@@ -842,7 +876,7 @@ namespace QLSV_HTC.Forms
             // dIACHITextBox
             // 
             this.dIACHITextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSINHVIEN, "DIACHI", true));
-            this.dIACHITextBox.Location = new System.Drawing.Point(106, 193);
+            this.dIACHITextBox.Location = new System.Drawing.Point(116, 193);
             this.dIACHITextBox.Name = "dIACHITextBox";
             this.dIACHITextBox.Size = new System.Drawing.Size(200, 21);
             this.dIACHITextBox.TabIndex = 11;
@@ -851,7 +885,7 @@ namespace QLSV_HTC.Forms
             // 
             this.DateEdit_NgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSINHVIEN, "NGAYSINH", true));
             this.DateEdit_NgaySinh.EditValue = null;
-            this.DateEdit_NgaySinh.Location = new System.Drawing.Point(106, 159);
+            this.DateEdit_NgaySinh.Location = new System.Drawing.Point(116, 159);
             this.DateEdit_NgaySinh.MenuManager = this.barManager1;
             this.DateEdit_NgaySinh.Name = "DateEdit_NgaySinh";
             this.DateEdit_NgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -864,7 +898,7 @@ namespace QLSV_HTC.Forms
             // TextBox_Ten
             // 
             this.TextBox_Ten.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSINHVIEN, "TEN", true));
-            this.TextBox_Ten.Location = new System.Drawing.Point(106, 94);
+            this.TextBox_Ten.Location = new System.Drawing.Point(116, 94);
             this.TextBox_Ten.Name = "TextBox_Ten";
             this.TextBox_Ten.Size = new System.Drawing.Size(200, 21);
             this.TextBox_Ten.TabIndex = 5;
@@ -872,7 +906,7 @@ namespace QLSV_HTC.Forms
             // TextBox_Ho
             // 
             this.TextBox_Ho.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSINHVIEN, "HO", true));
-            this.TextBox_Ho.Location = new System.Drawing.Point(106, 53);
+            this.TextBox_Ho.Location = new System.Drawing.Point(116, 53);
             this.TextBox_Ho.Name = "TextBox_Ho";
             this.TextBox_Ho.Size = new System.Drawing.Size(200, 21);
             this.TextBox_Ho.TabIndex = 3;
@@ -881,7 +915,7 @@ namespace QLSV_HTC.Forms
             // 
             this.TextBox_MaSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSINHVIEN, "MASV", true));
             this.TextBox_MaSV.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.TextBox_MaSV.Location = new System.Drawing.Point(106, 21);
+            this.TextBox_MaSV.Location = new System.Drawing.Point(116, 21);
             this.TextBox_MaSV.Name = "TextBox_MaSV";
             this.TextBox_MaSV.Size = new System.Drawing.Size(200, 21);
             this.TextBox_MaSV.TabIndex = 1;
@@ -897,6 +931,23 @@ namespace QLSV_HTC.Forms
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1897, 715);
             this.flowLayoutPanel1.TabIndex = 22;
             this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // cHUYENNGANHBindingSource
+            // 
+            this.cHUYENNGANHBindingSource.DataMember = "CHUYENNGANH";
+            this.cHUYENNGANHBindingSource.DataSource = this.dS;
+            // 
+            // cHUYENNGANHTableAdapter
+            // 
+            this.cHUYENNGANHTableAdapter.ClearBeforeFill = true;
+            // 
+            // colMACN
+            // 
+            this.colMACN.Caption = "Chuyên ngành";
+            this.colMACN.FieldName = "MACN";
+            this.colMACN.Name = "colMACN";
+            this.colMACN.Visible = true;
+            this.colMACN.VisibleIndex = 7;
             // 
             // SinhVienForm
             // 
@@ -936,6 +987,7 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_NgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit_NgaySinh.Properties)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENNGANHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1015,5 +1067,10 @@ namespace QLSV_HTC.Forms
         private System.Windows.Forms.TextBox TextBox_Ho;
         private System.Windows.Forms.TextBox TextBox_MaSV;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource cHUYENNGANHBindingSource;
+        private DSTableAdapters.CHUYENNGANHTableAdapter cHUYENNGANHTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colMACN;
     }
 }

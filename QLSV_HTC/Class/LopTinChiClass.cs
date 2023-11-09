@@ -8,16 +8,15 @@ namespace QLSV_HTC.Class
 {
     class LopTinChiClass
     {
-        string nienkhoa, mamh, magv, makhoa;
-        int maltc, hocky, nhom, sosvtt;
+        string nienkhoa, mamh, makhoa;
+        int maltc, hocky, nhom, sosvtt, matgdk;
         bool huylop;
 
-        public LopTinChiClass(int maltc, string nienkhoa, string mamh, string magv, string makhoa, int hocky, int nhom, int sosvtt, bool huylop)
+        public LopTinChiClass(int maltc, string nienkhoa, string mamh, string makhoa, int hocky, int nhom, int sosvtt, bool huylop)
         {
             this.maltc = maltc;
             this.nienkhoa = nienkhoa;
             this.mamh = mamh;
-            this.magv = magv;
             this.makhoa = makhoa;
             this.hocky = hocky;
             this.nhom = nhom;
@@ -41,12 +40,6 @@ namespace QLSV_HTC.Class
         {
             get { return mamh; }
             set { mamh = value; }
-        }
-
-        public string MaGiangVien
-        {
-            get { return magv; }
-            set { magv = value; }
         }
 
         public string MaKhoa
@@ -73,6 +66,11 @@ namespace QLSV_HTC.Class
             set { sosvtt = value; }
         }
 
+        public int MaTGDK
+        {
+            get { return matgdk; }
+            set { matgdk = value; }
+        }
         public bool HuyLop
         {
             get { return huylop; }
