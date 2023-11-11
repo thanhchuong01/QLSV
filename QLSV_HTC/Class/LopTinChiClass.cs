@@ -12,7 +12,7 @@ namespace QLSV_HTC.Class
         int maltc, hocky, nhom, sosvtt, matgdk;
         bool huylop;
 
-        public LopTinChiClass(int maltc, string nienkhoa, string mamh, string makhoa, int hocky, int nhom, int sosvtt, bool huylop)
+        public LopTinChiClass(int maltc, string nienkhoa, string mamh, string makhoa, int hocky, int nhom, int sosvtt, bool huylop, int matgdk)
         {
             this.maltc = maltc;
             this.nienkhoa = nienkhoa;
@@ -22,6 +22,7 @@ namespace QLSV_HTC.Class
             this.nhom = nhom;
             this.sosvtt = sosvtt;
             this.huylop = huylop;
+            this.matgdk = matgdk;
         }
 
         public int MaLTC

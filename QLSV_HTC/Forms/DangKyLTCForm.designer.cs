@@ -56,9 +56,8 @@ namespace QLSV_HTC.Forms
             this.colSOLUONGCL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-     //       this.sp_LayDSLopTinChiDaDangKyGridControl = new DevExpress.XtraGrid.GridControl();
+            this.sp_LayDSLopTinChiDaDangKyGridControl = new DevExpress.XtraGrid.GridControl();
             this.sp_LayDSLopTinChiDaDangKyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dS = new QLSV_HTC.DS();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,9 +67,10 @@ namespace QLSV_HTC.Forms
             this.colNIENKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnXoaDangKy = new DevExpress.XtraEditors.SimpleButton();
+            this.DS = new QLSV_HTC.DS();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.disabledCellEvents1 = new DevExpress.Utils.Behaviors.Common.DisabledCellEvents(this.components);
-          //  this.sp_LayDSLopTinChiDaDangKyTableAdapter = new QLSV_HTC.DSTableAdapters.sp_LayDSLopTinChiDaDangKyTableAdapter();
+            this.sp_LayDSLopTinChiDaDangKyTableAdapter = new QLSV_HTC.DSTableAdapters.sp_LayDSLopTinChiDaDangKyTableAdapter();
             this.tableAdapterManager = new QLSV_HTC.DSTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -87,12 +87,12 @@ namespace QLSV_HTC.Forms
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-    //        ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -370,7 +370,7 @@ namespace QLSV_HTC.Forms
             // 
             // panelControl3
             // 
-    //        this.panelControl3.Controls.Add(this.sp_LayDSLopTinChiDaDangKyGridControl);
+            this.panelControl3.Controls.Add(this.sp_LayDSLopTinChiDaDangKyGridControl);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(2, 56);
             this.panelControl3.Name = "panelControl3";
@@ -379,25 +379,15 @@ namespace QLSV_HTC.Forms
             // 
             // sp_LayDSLopTinChiDaDangKyGridControl
             // 
-  //          this.sp_LayDSLopTinChiDaDangKyGridControl.DataSource = this.sp_LayDSLopTinChiDaDangKyBindingSource;
-    //        this.sp_LayDSLopTinChiDaDangKyGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-      //      this.sp_LayDSLopTinChiDaDangKyGridControl.Location = new System.Drawing.Point(2, 2);
-        //    this.sp_LayDSLopTinChiDaDangKyGridControl.MainView = this.gridView2;
-          //  this.sp_LayDSLopTinChiDaDangKyGridControl.Name = "sp_LayDSLopTinChiDaDangKyGridControl";
-    //        this.sp_LayDSLopTinChiDaDangKyGridControl.Size = new System.Drawing.Size(1268, 210);
-      //      this.sp_LayDSLopTinChiDaDangKyGridControl.TabIndex = 0;
-        //    this.sp_LayDSLopTinChiDaDangKyGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-          //  this.gridView2});
-            // 
-            // sp_LayDSLopTinChiDaDangKyBindingSource
-            // 
-            this.sp_LayDSLopTinChiDaDangKyBindingSource.DataMember = "sp_LayDSLopTinChiDaDangKy";
-            this.sp_LayDSLopTinChiDaDangKyBindingSource.DataSource = this.dS;
-            // 
-            // dS
-            // 
-            this.dS.DataSetName = "DS";
-            this.dS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sp_LayDSLopTinChiDaDangKyGridControl.DataSource = this.sp_LayDSLopTinChiDaDangKyBindingSource;
+            this.sp_LayDSLopTinChiDaDangKyGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sp_LayDSLopTinChiDaDangKyGridControl.Location = new System.Drawing.Point(2, 2);
+            this.sp_LayDSLopTinChiDaDangKyGridControl.MainView = this.gridView2;
+            this.sp_LayDSLopTinChiDaDangKyGridControl.Name = "sp_LayDSLopTinChiDaDangKyGridControl";
+            this.sp_LayDSLopTinChiDaDangKyGridControl.Size = new System.Drawing.Size(1268, 210);
+            this.sp_LayDSLopTinChiDaDangKyGridControl.TabIndex = 0;
+            this.sp_LayDSLopTinChiDaDangKyGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
             // gridView2
             // 
@@ -408,7 +398,7 @@ namespace QLSV_HTC.Forms
             this.colTENMH1,
             this.colNHOM1,
             this.colNIENKHOA});
-   //         this.gridView2.GridControl = this.sp_LayDSLopTinChiDaDangKyGridControl;
+            this.gridView2.GridControl = this.sp_LayDSLopTinChiDaDangKyGridControl;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsSelection.EnableAppearanceFocusedRow = false;
@@ -491,31 +481,45 @@ namespace QLSV_HTC.Forms
             this.btnXoaDangKy.Text = "Xóa";
             this.btnXoaDangKy.Click += new System.EventHandler(this.btnXoaDangKy_Click);
             // 
+            // DS
+            // 
+            this.DS.DataSetName = "DS";
+            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // disabledCellEvents1
             // 
             this.disabledCellEvents1.ProcessingCell += new System.EventHandler<DevExpress.Utils.Behaviors.Common.ProcessCellEventArgs>(this.DisabledCellEvents1_ProcessingCell);
             // 
             // sp_LayDSLopTinChiDaDangKyTableAdapter
             // 
-      //      this.sp_LayDSLopTinChiDaDangKyTableAdapter.ClearBeforeFill = true;
+            this.sp_LayDSLopTinChiDaDangKyTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CHUYENNGANHTableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DANGKYTableAdapter = null;
+            this.tableAdapterManager.DAYTableAdapter = null;
             this.tableAdapterManager.GIANGVIENTableAdapter = null;
+            this.tableAdapterManager.KEHOACHGIANGDAYTableAdapter = null;
+            this.tableAdapterManager.KHANANGGIANGDAYTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
+            this.tableAdapterManager.LICHHOCTableAdapter = null;
             this.tableAdapterManager.LOPTableAdapter = null;
             this.tableAdapterManager.LOPTINCHITableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
+            this.tableAdapterManager.THOIGIANDKTableAdapter = null;
+            this.tableAdapterManager.THOIGIANHOCTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLSV_HTC.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // DangKyLTCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1276, 567);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
@@ -537,14 +541,15 @@ namespace QLSV_HTC.Forms
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-     //       ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyGridControl)).EndInit();
-       //     ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_LayDSLopTinChiDaDangKyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -566,11 +571,11 @@ namespace QLSV_HTC.Forms
         private DevExpress.XtraGrid.Columns.GridColumn colSOSVTOITHIEU;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.Utils.Behaviors.Common.DisabledCellEvents disabledCellEvents1;
-        private DS dS;
+        private DS DS;
         private System.Windows.Forms.BindingSource sp_LayDSLopTinChiDaDangKyBindingSource;
-      //  private DSTableAdapters.sp_LayDSLopTinChiDaDangKyTableAdapter sp_LayDSLopTinChiDaDangKyTableAdapter;
+        private DSTableAdapters.sp_LayDSLopTinChiDaDangKyTableAdapter sp_LayDSLopTinChiDaDangKyTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-     //   private DevExpress.XtraGrid.GridControl sp_LayDSLopTinChiDaDangKyGridControl;
+        private DevExpress.XtraGrid.GridControl sp_LayDSLopTinChiDaDangKyGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;

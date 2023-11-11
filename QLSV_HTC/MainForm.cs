@@ -29,6 +29,7 @@ namespace QLSV_HTC
             Program.AuthHoten = string.Empty;
 
             Program.MaKhoa = "";
+            Program.Conn.Close();
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -141,7 +142,7 @@ namespace QLSV_HTC
 
         private void barBtnGV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            ShowMdiChildren(typeof(GiangVienForm));
         }
     } 
     

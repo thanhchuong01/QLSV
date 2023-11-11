@@ -96,7 +96,11 @@
     <Compile Include="Class\LopTinChiClass.cs" />
     <Compile Include="Class\MonHocClass.cs" />
     <Compile Include="Class\RoleClass.cs" />
+    <Compile Include="Class\GiangVienClass.cs" />
     <Compile Include="Class\SinhVienClass.cs" />
+    <Compile Include="DS.cs">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +159,12 @@
     </Compile>
     <Compile Include="Forms\DiemForm.designer.cs">
       <DependentUpon>DiemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GiangVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiangVienForm.designer.cs">
+      <DependentUpon>GiangVienForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -248,6 +258,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DiemForm.resx">
       <DependentUpon>DiemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiangVienForm.resx">
+      <DependentUpon>GiangVienForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">

@@ -397,13 +397,21 @@ namespace QLSV_HTC.Forms
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CHUYENNGANHTableAdapter = null;
             this.tableAdapterManager.DANGKYTableAdapter = null;
+            this.tableAdapterManager.DAYTableAdapter = null;
             this.tableAdapterManager.GIANGVIENTableAdapter = null;
+            this.tableAdapterManager.KEHOACHGIANGDAYTableAdapter = null;
+            this.tableAdapterManager.KHANANGGIANGDAYTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
+            this.tableAdapterManager.LICHHOCTableAdapter = null;
             this.tableAdapterManager.LOPTableAdapter = null;
             this.tableAdapterManager.LOPTINCHITableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = this.MONHOCTableAdapter;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
+            this.tableAdapterManager.THOIGIANDKTableAdapter = null;
+            this.tableAdapterManager.THOIGIANHOCTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLSV_HTC.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // gcMONHOC
@@ -485,7 +493,6 @@ namespace QLSV_HTC.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(979, 1068);
             this.Controls.Add(this.gcMONHOC);
             this.Controls.Add(this.panelControl1);

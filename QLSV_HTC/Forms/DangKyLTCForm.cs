@@ -86,9 +86,9 @@ namespace QLSV_HTC.Forms
 
         private void LoadDataDanhSachDaDangKy()
         {
-            this.dS.EnforceConstraints = false;
-          //  this.sp_LayDSLopTinChiDaDangKyTableAdapter.Connection.ConnectionString = Program.ConnStr;
-          //  this.sp_LayDSLopTinChiDaDangKyTableAdapter.Fill(this.dS.sp_LayDSLopTinChiDaDangKy, txtMaSV.Text.Trim(), txtNienKhoa.Text.Trim(), Convert.ToInt32(txtHocKy.Text.Trim()));
+            this.DS.EnforceConstraints = false;
+            this.sp_LayDSLopTinChiDaDangKyTableAdapter.Connection.ConnectionString = Program.ConnStr;
+            this.sp_LayDSLopTinChiDaDangKyTableAdapter.Fill(this.DS.sp_LayDSLopTinChiDaDangKy, txtMaSV.Text.Trim(), txtNienKhoa.Text.Trim(), Convert.ToInt32(txtHocKy.Text.Trim()));
             this.gridView2.Columns[1].Visible = false;
         }
 
@@ -179,7 +179,7 @@ namespace QLSV_HTC.Forms
                     ltc_ID.Add(Convert.ToInt32(row["MALTC"]));
                 }
 
-                string query = string.Format("UPDATE DANGKY SET HUYDANGKY = {0} WHERE MASV = N'{1}' AND MALTC IN({2})", 1, txtMaSV.Text.Trim(), string.Join(", ", ltc_ID.ToArray()));
+                string query = string.Format("UPDATE DANGKY SET HUYDK = {0} WHERE MASV = N'{1}' AND MALTC IN({2})", 1, txtMaSV.Text.Trim(), string.Join(", ", ltc_ID.ToArray()));
                 var result = Program.ExecSqlNonQuery(query);
                 gridView2.EndSelection();
                 if (result == 0)

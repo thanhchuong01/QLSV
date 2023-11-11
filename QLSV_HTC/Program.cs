@@ -104,6 +104,7 @@ namespace QLSV_HTC
             SqlCommand sqlcmd = new SqlCommand(strLenh, Program.Conn);
 
             //xác định kiểu lệnh cho sqlcmd là kiểu text.
+         //   if (Program.Conn.State == ConnectionState.Open) Program.Conn.Close();
             sqlcmd.CommandType = CommandType.Text;
             sqlcmd.CommandTimeout = 600;
             if (Program.Conn.State == ConnectionState.Closed) Program.Conn.Open();
@@ -118,6 +119,7 @@ namespace QLSV_HTC
                 XtraMessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
+           
         }
 
         // tải về cho phép xem xóa sửa ==> tốc độ tải chậm hơn cái ở trên

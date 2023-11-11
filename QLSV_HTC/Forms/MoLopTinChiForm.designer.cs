@@ -34,50 +34,12 @@ namespace QLSV_HTC.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MoLopTinChiForm));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.dataGridViewTGH = new System.Windows.Forms.DataGridView();
-            this.mATGHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MALTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bUOIHOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tHUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tHOIGIANHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DS = new QLSV_HTC.DS();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tHOIGIANDKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.datiNewEnd = new System.Windows.Forms.DateTimePicker();
-            this.datiNewStart = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioBtnNew = new System.Windows.Forms.RadioButton();
-            this.radioBtnAva = new System.Windows.Forms.RadioButton();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ngay = new DevExpress.XtraLayout.LayoutControlItem();
-            this.datiAvaStart = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bdsLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
-            this.datiAvaEnd = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnAddGV = new System.Windows.Forms.Button();
-            this.buttonDelGV = new System.Windows.Forms.Button();
-            this.dataGridViewGV = new System.Windows.Forms.DataGridView();
-            this.hUYLOPCheckBox = new System.Windows.Forms.CheckBox();
-            this.txtMaLTC = new DevExpress.XtraEditors.SpinEdit();
+            this.lookUpEditTimeHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -92,6 +54,44 @@ namespace QLSV_HTC.Forms
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.tHOIGIANHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DS = new QLSV_HTC.DS();
+            this.buttonDelTime = new System.Windows.Forms.Button();
+            this.buttonAddtime = new System.Windows.Forms.Button();
+            this.dataGridViewTGH = new System.Windows.Forms.DataGridView();
+            this.mATGHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MALTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bUOIHOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tHUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnDKTime = new System.Windows.Forms.Button();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
+            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.radioBtnNew = new System.Windows.Forms.RadioButton();
+            this.radioBtnAva = new System.Windows.Forms.RadioButton();
+            this.lookUpEditTimeDK = new DevExpress.XtraEditors.LookUpEdit();
+            this.tHOIGIANDKBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.datiNewEnd = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.datiNewStart = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnAddGV = new System.Windows.Forms.Button();
+            this.buttonDelGV = new System.Windows.Forms.Button();
+            this.dataGridViewGV = new System.Windows.Forms.DataGridView();
+            this.hUYLOPCheckBox = new System.Windows.Forms.CheckBox();
+            this.bdsLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
+            this.txtMaLTC = new DevExpress.XtraEditors.SpinEdit();
             this.txtSoSVTT = new DevExpress.XtraEditors.SpinEdit();
             this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
             this.txtNhom = new DevExpress.XtraEditors.SpinEdit();
@@ -114,6 +114,7 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tHOIGIANDKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bdsfKLICHHOCLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
             this.bdsfKLOPTINCHITHOIGIANDK = new System.Windows.Forms.BindingSource(this.components);
             this.fKDAYLOPTINCHIBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -154,39 +155,36 @@ namespace QLSV_HTC.Forms
             this.fKDAYLOPTINCHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKDAYLOPTINCHIBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lOPTINCHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonAddtime = new System.Windows.Forms.Button();
-            this.buttonDelTime = new System.Windows.Forms.Button();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTGH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditTimeHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANHOCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTGH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditTimeDK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ngay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datiAvaStart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datiAvaEnd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoSVTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhom.Properties)).BeginInit();
@@ -209,6 +207,7 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLICHHOCLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLOPTINCHITHOIGIANDK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource3)).BeginInit();
@@ -232,7 +231,6 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -252,7 +250,7 @@ namespace QLSV_HTC.Forms
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.lookUpEdit1);
+            this.groupControl3.Controls.Add(this.lookUpEditTimeHoc);
             this.groupControl3.Controls.Add(this.buttonDelTime);
             this.groupControl3.Controls.Add(this.buttonAddtime);
             this.groupControl3.Controls.Add(this.dataGridViewTGH);
@@ -262,404 +260,20 @@ namespace QLSV_HTC.Forms
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Thời gian học";
             // 
-            // dataGridViewTGH
-            // 
-            this.dataGridViewTGH.AutoGenerateColumns = false;
-            this.dataGridViewTGH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewTGH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTGH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mATGHDataGridViewTextBoxColumn,
-            this.MALTC,
-            this.bUOIHOCDataGridViewTextBoxColumn,
-            this.tHUDataGridViewTextBoxColumn});
-            this.dataGridViewTGH.DataSource = this.tHOIGIANHOCBindingSource;
-            this.dataGridViewTGH.Location = new System.Drawing.Point(26, 150);
-            this.dataGridViewTGH.Name = "dataGridViewTGH";
-            this.dataGridViewTGH.ReadOnly = true;
-            this.dataGridViewTGH.Size = new System.Drawing.Size(444, 101);
-            this.dataGridViewTGH.TabIndex = 0;
-            // 
-            // mATGHDataGridViewTextBoxColumn
-            // 
-            this.mATGHDataGridViewTextBoxColumn.DataPropertyName = "MATGH";
-            this.mATGHDataGridViewTextBoxColumn.HeaderText = "Mã thời gian học";
-            this.mATGHDataGridViewTextBoxColumn.Name = "mATGHDataGridViewTextBoxColumn";
-            this.mATGHDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mATGHDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // MALTC
-            // 
-            this.MALTC.HeaderText = "Mã lớp tín chỉ";
-            this.MALTC.Name = "MALTC";
-            this.MALTC.ReadOnly = true;
-            this.MALTC.Visible = false;
-            // 
-            // bUOIHOCDataGridViewTextBoxColumn
-            // 
-            this.bUOIHOCDataGridViewTextBoxColumn.DataPropertyName = "BUOIHOC";
-            this.bUOIHOCDataGridViewTextBoxColumn.HeaderText = "Buổi học";
-            this.bUOIHOCDataGridViewTextBoxColumn.Name = "bUOIHOCDataGridViewTextBoxColumn";
-            this.bUOIHOCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tHUDataGridViewTextBoxColumn
-            // 
-            this.tHUDataGridViewTextBoxColumn.DataPropertyName = "THU";
-            this.tHUDataGridViewTextBoxColumn.HeaderText = "Thứ";
-            this.tHUDataGridViewTextBoxColumn.Name = "tHUDataGridViewTextBoxColumn";
-            this.tHUDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tHOIGIANHOCBindingSource
-            // 
-            this.tHOIGIANHOCBindingSource.DataMember = "THOIGIANHOC";
-            this.tHOIGIANHOCBindingSource.DataSource = this.DS;
-            // 
-            // DS
-            // 
-            this.DS.DataSetName = "DS";
-            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.textBox2);
-            this.groupControl2.Controls.Add(this.textBox1);
-            this.groupControl2.Controls.Add(this.layoutControl2);
-            this.groupControl2.Location = new System.Drawing.Point(667, 2);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(563, 265);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "Thời gian đăng ký";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(205, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tHOIGIANDKBindingSource, "NGAYBDDK", true));
-            this.textBox1.Location = new System.Drawing.Point(20, 155);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // tHOIGIANDKBindingSource
-            // 
-            this.tHOIGIANDKBindingSource.DataMember = "THOIGIANDK";
-            this.tHOIGIANDKBindingSource.DataSource = this.DS;
-            // 
-            // layoutControl2
-            // 
-            this.layoutControl2.Controls.Add(this.datiNewEnd);
-            this.layoutControl2.Controls.Add(this.datiNewStart);
-            this.layoutControl2.Controls.Add(this.comboBox2);
-            this.layoutControl2.Controls.Add(this.comboBox1);
-            this.layoutControl2.Controls.Add(this.label2);
-            this.layoutControl2.Controls.Add(this.label3);
-            this.layoutControl2.Controls.Add(this.label1);
-            this.layoutControl2.Controls.Add(this.radioBtnNew);
-            this.layoutControl2.Controls.Add(this.radioBtnAva);
-            this.layoutControl2.Location = new System.Drawing.Point(5, 24);
-            this.layoutControl2.Name = "layoutControl2";
-            this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(465, 109);
-            this.layoutControl2.TabIndex = 0;
-            this.layoutControl2.Text = "layoutControl2";
-            // 
-            // datiNewEnd
-            // 
-            this.datiNewEnd.Checked = false;
-            this.datiNewEnd.Enabled = false;
-            this.datiNewEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datiNewEnd.Location = new System.Drawing.Point(285, 66);
-            this.datiNewEnd.Name = "datiNewEnd";
-            this.datiNewEnd.Size = new System.Drawing.Size(168, 21);
-            this.datiNewEnd.TabIndex = 17;
-            // 
-            // datiNewStart
-            // 
-            this.datiNewStart.Checked = false;
-            this.datiNewStart.Enabled = false;
-            this.datiNewStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datiNewStart.Location = new System.Drawing.Point(285, 41);
-            this.datiNewStart.Name = "datiNewStart";
-            this.datiNewStart.Size = new System.Drawing.Size(168, 21);
-            this.datiNewStart.TabIndex = 16;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.tHOIGIANDKBindingSource;
-            this.comboBox2.DisplayMember = "NGAYKTDK";
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(101, 66);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 21);
-            this.comboBox2.TabIndex = 15;
-            this.comboBox2.ValueMember = "MATGDK";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.tHOIGIANDKBindingSource;
-            this.comboBox1.DisplayMember = "MATGDK";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 21);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.ValueMember = "MATGDK";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(12, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 21);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Ngày bắt đầu";
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(12, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Thời gian";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(12, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 31);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Ngày kết thúc";
-            // 
-            // radioBtnNew
-            // 
-            this.radioBtnNew.Location = new System.Drawing.Point(285, 12);
-            this.radioBtnNew.Name = "radioBtnNew";
-            this.radioBtnNew.Size = new System.Drawing.Size(168, 25);
-            this.radioBtnNew.TabIndex = 5;
-            this.radioBtnNew.Text = "Tạo mới";
-            this.radioBtnNew.UseVisualStyleBackColor = true;
-            this.radioBtnNew.CheckedChanged += new System.EventHandler(this.radioBtnNew_CheckedChanged);
-            // 
-            // radioBtnAva
-            // 
-            this.radioBtnAva.Checked = true;
-            this.radioBtnAva.Location = new System.Drawing.Point(101, 12);
-            this.radioBtnAva.Name = "radioBtnAva";
-            this.radioBtnAva.Size = new System.Drawing.Size(180, 25);
-            this.radioBtnAva.TabIndex = 4;
-            this.radioBtnAva.TabStop = true;
-            this.radioBtnAva.Text = "Có sẵn";
-            this.radioBtnAva.UseVisualStyleBackColor = true;
-            this.radioBtnAva.CheckedChanged += new System.EventHandler(this.radioBtnAva_CheckedChanged);
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.GroupStyle = DevExpress.Utils.GroupStyle.Title;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem11,
-            this.layoutControlItem16,
-            this.layoutControlItem18,
-            this.ngay,
-            this.datiAvaStart,
-            this.datiAvaEnd,
-            this.layoutControlItem14,
-            this.layoutControlItem15});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(465, 109);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.radioBtnAva;
-            this.layoutControlItem1.Location = new System.Drawing.Point(89, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(184, 29);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.radioBtnNew;
-            this.layoutControlItem11.Location = new System.Drawing.Point(273, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(172, 29);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.label1;
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 54);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(89, 35);
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem16.TextVisible = false;
-            // 
-            // layoutControlItem18
-            // 
-            this.layoutControlItem18.Control = this.label3;
-            this.layoutControlItem18.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(89, 29);
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem18.TextVisible = false;
-            // 
-            // ngay
-            // 
-            this.ngay.Control = this.label2;
-            this.ngay.Location = new System.Drawing.Point(0, 29);
-            this.ngay.Name = "ngay";
-            this.ngay.Size = new System.Drawing.Size(89, 25);
-            this.ngay.TextSize = new System.Drawing.Size(0, 0);
-            this.ngay.TextVisible = false;
-            // 
-            // datiAvaStart
-            // 
-            this.datiAvaStart.Control = this.comboBox1;
-            this.datiAvaStart.DataBindings.Add(new System.Windows.Forms.Binding("CustomizationFormText", this.bdsLOPTINCHI, "MATGDK", true));
-            this.datiAvaStart.Location = new System.Drawing.Point(89, 29);
-            this.datiAvaStart.Name = "datiAvaStart";
-            this.datiAvaStart.Size = new System.Drawing.Size(184, 25);
-            this.datiAvaStart.TextSize = new System.Drawing.Size(0, 0);
-            this.datiAvaStart.TextVisible = false;
-            // 
-            // bdsLOPTINCHI
-            // 
-            this.bdsLOPTINCHI.DataMember = "LOPTINCHI";
-            this.bdsLOPTINCHI.DataSource = this.DS;
-            // 
-            // datiAvaEnd
-            // 
-            this.datiAvaEnd.Control = this.comboBox2;
-            this.datiAvaEnd.Location = new System.Drawing.Point(89, 54);
-            this.datiAvaEnd.Name = "datiAvaEnd";
-            this.datiAvaEnd.Size = new System.Drawing.Size(184, 35);
-            this.datiAvaEnd.TextSize = new System.Drawing.Size(0, 0);
-            this.datiAvaEnd.TextVisible = false;
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.datiNewStart;
-            this.layoutControlItem14.Location = new System.Drawing.Point(273, 29);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(172, 25);
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem14.TextVisible = false;
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.datiNewEnd;
-            this.layoutControlItem15.Location = new System.Drawing.Point(273, 54);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(172, 35);
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem15.TextVisible = false;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.layoutControl1);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl1.Location = new System.Drawing.Point(2, 2);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(659, 265);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Thông tin lớp tín chỉ";
-            // 
-            // layoutControl1
-            // 
-            this.layoutControl1.Controls.Add(this.btnAddGV);
-            this.layoutControl1.Controls.Add(this.buttonDelGV);
-            this.layoutControl1.Controls.Add(this.dataGridViewGV);
-            this.layoutControl1.Controls.Add(this.hUYLOPCheckBox);
-            this.layoutControl1.Controls.Add(this.txtMaLTC);
-            this.layoutControl1.Controls.Add(this.txtSoSVTT);
-            this.layoutControl1.Controls.Add(this.txtMaKhoa);
-            this.layoutControl1.Controls.Add(this.txtNhom);
-            this.layoutControl1.Controls.Add(this.txtHocKy);
-            this.layoutControl1.Controls.Add(this.txtNienKhoa);
-            this.layoutControl1.Controls.Add(this.txtMaMonHoc);
-            this.layoutControl1.Controls.Add(this.comboBoxGV);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(2, 23);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(655, 240);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
-            // 
-            // btnAddGV
-            // 
-            this.btnAddGV.Enabled = false;
-            this.btnAddGV.Location = new System.Drawing.Point(533, 108);
-            this.btnAddGV.Name = "btnAddGV";
-            this.btnAddGV.Size = new System.Drawing.Size(110, 45);
-            this.btnAddGV.TabIndex = 16;
-            this.btnAddGV.Text = "Thêm";
-            this.btnAddGV.UseVisualStyleBackColor = true;
-            this.btnAddGV.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // buttonDelGV
-            // 
-            this.buttonDelGV.Location = new System.Drawing.Point(533, 157);
-            this.buttonDelGV.Name = "buttonDelGV";
-            this.buttonDelGV.Size = new System.Drawing.Size(110, 71);
-            this.buttonDelGV.TabIndex = 17;
-            this.buttonDelGV.Text = "Xóa";
-            this.buttonDelGV.UseVisualStyleBackColor = true;
-            this.buttonDelGV.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dataGridViewGV
-            // 
-            this.dataGridViewGV.AllowUserToAddRows = false;
-            this.dataGridViewGV.AllowUserToDeleteRows = false;
-            this.dataGridViewGV.AllowUserToOrderColumns = true;
-            this.dataGridViewGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGV.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridViewGV.Location = new System.Drawing.Point(92, 132);
-            this.dataGridViewGV.Name = "dataGridViewGV";
-            this.dataGridViewGV.ReadOnly = true;
-            this.dataGridViewGV.Size = new System.Drawing.Size(437, 96);
-            this.dataGridViewGV.TabIndex = 15;
-            this.dataGridViewGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // hUYLOPCheckBox
-            // 
-            this.hUYLOPCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsLOPTINCHI, "HUYLOP", true));
-            this.hUYLOPCheckBox.Location = new System.Drawing.Point(12, 84);
-            this.hUYLOPCheckBox.Name = "hUYLOPCheckBox";
-            this.hUYLOPCheckBox.Size = new System.Drawing.Size(341, 20);
-            this.hUYLOPCheckBox.TabIndex = 14;
-            this.hUYLOPCheckBox.Text = "Hủy lớp";
-            this.hUYLOPCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // txtMaLTC
-            // 
-            this.txtMaLTC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTINCHI, "MALTC", true));
-            this.txtMaLTC.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtMaLTC.Location = new System.Drawing.Point(437, 84);
-            this.txtMaLTC.MenuManager = this.barManager1;
-            this.txtMaLTC.Name = "txtMaLTC";
-            this.txtMaLTC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            // lookUpEditTimeHoc
+            // 
+            this.lookUpEditTimeHoc.Location = new System.Drawing.Point(26, 87);
+            this.lookUpEditTimeHoc.MenuManager = this.barManager1;
+            this.lookUpEditTimeHoc.Name = "lookUpEditTimeHoc";
+            this.lookUpEditTimeHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtMaLTC.Properties.IsFloatValue = false;
-            this.txtMaLTC.Properties.Mask.EditMask = "N00";
-            this.txtMaLTC.Size = new System.Drawing.Size(206, 20);
-            this.txtMaLTC.StyleController = this.layoutControl1;
-            this.txtMaLTC.TabIndex = 13;
+            this.lookUpEditTimeHoc.Properties.DataSource = this.tHOIGIANHOCBindingSource;
+            this.lookUpEditTimeHoc.Properties.DisplayMember = "MATGH";
+            this.lookUpEditTimeHoc.Properties.NullText = "Chọn thời gian";
+            this.lookUpEditTimeHoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpEditTimeHoc.Properties.ValueMember = "MATGH";
+            this.lookUpEditTimeHoc.Size = new System.Drawing.Size(444, 20);
+            this.lookUpEditTimeHoc.TabIndex = 3;
             // 
             // barManager1
             // 
@@ -808,6 +422,406 @@ namespace QLSV_HTC.Forms
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 985);
             // 
+            // tHOIGIANHOCBindingSource
+            // 
+            this.tHOIGIANHOCBindingSource.DataMember = "THOIGIANHOC";
+            this.tHOIGIANHOCBindingSource.DataSource = this.DS;
+            // 
+            // DS
+            // 
+            this.DS.DataSetName = "DS";
+            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonDelTime
+            // 
+            this.buttonDelTime.Location = new System.Drawing.Point(495, 150);
+            this.buttonDelTime.Name = "buttonDelTime";
+            this.buttonDelTime.Size = new System.Drawing.Size(75, 52);
+            this.buttonDelTime.TabIndex = 2;
+            this.buttonDelTime.Text = "Xóa buổi";
+            this.buttonDelTime.UseVisualStyleBackColor = true;
+            this.buttonDelTime.Click += new System.EventHandler(this.buttonDelTime_Click);
+            // 
+            // buttonAddtime
+            // 
+            this.buttonAddtime.Location = new System.Drawing.Point(495, 65);
+            this.buttonAddtime.Name = "buttonAddtime";
+            this.buttonAddtime.Size = new System.Drawing.Size(75, 43);
+            this.buttonAddtime.TabIndex = 1;
+            this.buttonAddtime.Text = "Thêm buổi";
+            this.buttonAddtime.UseVisualStyleBackColor = true;
+            this.buttonAddtime.Click += new System.EventHandler(this.buttonAddtime_Click);
+            // 
+            // dataGridViewTGH
+            // 
+            this.dataGridViewTGH.AutoGenerateColumns = false;
+            this.dataGridViewTGH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewTGH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTGH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mATGHDataGridViewTextBoxColumn,
+            this.MALTC,
+            this.bUOIHOCDataGridViewTextBoxColumn,
+            this.tHUDataGridViewTextBoxColumn});
+            this.dataGridViewTGH.DataSource = this.tHOIGIANHOCBindingSource;
+            this.dataGridViewTGH.Location = new System.Drawing.Point(26, 150);
+            this.dataGridViewTGH.Name = "dataGridViewTGH";
+            this.dataGridViewTGH.ReadOnly = true;
+            this.dataGridViewTGH.Size = new System.Drawing.Size(444, 101);
+            this.dataGridViewTGH.TabIndex = 0;
+            // 
+            // mATGHDataGridViewTextBoxColumn
+            // 
+            this.mATGHDataGridViewTextBoxColumn.DataPropertyName = "MATGH";
+            this.mATGHDataGridViewTextBoxColumn.HeaderText = "Mã thời gian học";
+            this.mATGHDataGridViewTextBoxColumn.Name = "mATGHDataGridViewTextBoxColumn";
+            this.mATGHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mATGHDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // MALTC
+            // 
+            this.MALTC.HeaderText = "Mã lớp tín chỉ";
+            this.MALTC.Name = "MALTC";
+            this.MALTC.ReadOnly = true;
+            this.MALTC.Visible = false;
+            // 
+            // bUOIHOCDataGridViewTextBoxColumn
+            // 
+            this.bUOIHOCDataGridViewTextBoxColumn.DataPropertyName = "BUOIHOC";
+            this.bUOIHOCDataGridViewTextBoxColumn.HeaderText = "Buổi học";
+            this.bUOIHOCDataGridViewTextBoxColumn.Name = "bUOIHOCDataGridViewTextBoxColumn";
+            this.bUOIHOCDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tHUDataGridViewTextBoxColumn
+            // 
+            this.tHUDataGridViewTextBoxColumn.DataPropertyName = "THU";
+            this.tHUDataGridViewTextBoxColumn.HeaderText = "Thứ";
+            this.tHUDataGridViewTextBoxColumn.Name = "tHUDataGridViewTextBoxColumn";
+            this.tHUDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.label3);
+            this.groupControl2.Controls.Add(this.btnDKTime);
+            this.groupControl2.Controls.Add(this.textBoxTime);
+            this.groupControl2.Controls.Add(this.layoutControl2);
+            this.groupControl2.Location = new System.Drawing.Point(667, 2);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(563, 241);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "Thời gian đăng ký";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 181);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Thời gian đăng ký của lớp tín chỉ";
+            // 
+            // btnDKTime
+            // 
+            this.btnDKTime.Location = new System.Drawing.Point(468, 47);
+            this.btnDKTime.Name = "btnDKTime";
+            this.btnDKTime.Size = new System.Drawing.Size(75, 48);
+            this.btnDKTime.TabIndex = 3;
+            this.btnDKTime.Text = "Đăng ký thời gian";
+            this.btnDKTime.UseVisualStyleBackColor = true;
+            this.btnDKTime.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBoxTime
+            // 
+            this.textBoxTime.Enabled = false;
+            this.textBoxTime.Location = new System.Drawing.Point(179, 178);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.Size = new System.Drawing.Size(329, 21);
+            this.textBoxTime.TabIndex = 2;
+            // 
+            // layoutControl2
+            // 
+            this.layoutControl2.Controls.Add(this.radioBtnNew);
+            this.layoutControl2.Controls.Add(this.radioBtnAva);
+            this.layoutControl2.Controls.Add(this.lookUpEditTimeDK);
+            this.layoutControl2.Controls.Add(this.datiNewEnd);
+            this.layoutControl2.Controls.Add(this.label1);
+            this.layoutControl2.Controls.Add(this.datiNewStart);
+            this.layoutControl2.Controls.Add(this.label2);
+            this.layoutControl2.Location = new System.Drawing.Point(5, 38);
+            this.layoutControl2.Name = "layoutControl2";
+            this.layoutControl2.Root = this.layoutControlGroup1;
+            this.layoutControl2.Size = new System.Drawing.Size(457, 102);
+            this.layoutControl2.TabIndex = 0;
+            this.layoutControl2.Text = "layoutControl2";
+            // 
+            // radioBtnNew
+            // 
+            this.radioBtnNew.Location = new System.Drawing.Point(12, 53);
+            this.radioBtnNew.Name = "radioBtnNew";
+            this.radioBtnNew.Size = new System.Drawing.Size(83, 25);
+            this.radioBtnNew.TabIndex = 5;
+            this.radioBtnNew.Text = "Tạo mới";
+            this.radioBtnNew.UseVisualStyleBackColor = true;
+            this.radioBtnNew.CheckedChanged += new System.EventHandler(this.radioBtnNew_CheckedChanged);
+            // 
+            // radioBtnAva
+            // 
+            this.radioBtnAva.Checked = true;
+            this.radioBtnAva.Location = new System.Drawing.Point(12, 12);
+            this.radioBtnAva.Name = "radioBtnAva";
+            this.radioBtnAva.Size = new System.Drawing.Size(83, 25);
+            this.radioBtnAva.TabIndex = 4;
+            this.radioBtnAva.TabStop = true;
+            this.radioBtnAva.Text = "Có sẵn";
+            this.radioBtnAva.UseVisualStyleBackColor = true;
+            this.radioBtnAva.CheckedChanged += new System.EventHandler(this.radioBtnAva_CheckedChanged);
+            // 
+            // lookUpEditTimeDK
+            // 
+            this.lookUpEditTimeDK.Location = new System.Drawing.Point(99, 14);
+            this.lookUpEditTimeDK.MenuManager = this.barManager1;
+            this.lookUpEditTimeDK.Name = "lookUpEditTimeDK";
+            this.lookUpEditTimeDK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditTimeDK.Properties.DataSource = this.tHOIGIANDKBindingSource1;
+            this.lookUpEditTimeDK.Properties.DisplayFormat.FormatString = "{1} - {2}";
+            this.lookUpEditTimeDK.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.lookUpEditTimeDK.Properties.DisplayMember = "MATGDK";
+            this.lookUpEditTimeDK.Properties.NullText = "Chọn thời gian đăng ký";
+            this.lookUpEditTimeDK.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpEditTimeDK.Properties.ValueMember = "MATGDK";
+            this.lookUpEditTimeDK.Size = new System.Drawing.Size(346, 20);
+            this.lookUpEditTimeDK.StyleController = this.layoutControl2;
+            this.lookUpEditTimeDK.TabIndex = 18;
+            this.lookUpEditTimeDK.EditValueChanged += new System.EventHandler(this.lookUpEdit1_EditValueChanged);
+            // 
+            // tHOIGIANDKBindingSource1
+            // 
+            this.tHOIGIANDKBindingSource1.DataMember = "THOIGIANDK";
+            this.tHOIGIANDKBindingSource1.DataSource = this.DS;
+            // 
+            // datiNewEnd
+            // 
+            this.datiNewEnd.Checked = false;
+            this.datiNewEnd.Enabled = false;
+            this.datiNewEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datiNewEnd.Location = new System.Drawing.Point(198, 67);
+            this.datiNewEnd.Name = "datiNewEnd";
+            this.datiNewEnd.Size = new System.Drawing.Size(247, 21);
+            this.datiNewEnd.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(99, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Ngày kết thúc";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // datiNewStart
+            // 
+            this.datiNewStart.Checked = false;
+            this.datiNewStart.Enabled = false;
+            this.datiNewStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datiNewStart.Location = new System.Drawing.Point(198, 41);
+            this.datiNewStart.Name = "datiNewStart";
+            this.datiNewStart.Size = new System.Drawing.Size(247, 21);
+            this.datiNewStart.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(99, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Ngày bắt đầu";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.GroupStyle = DevExpress.Utils.GroupStyle.Title;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem15,
+            this.layoutControlItem16,
+            this.layoutControlItem17,
+            this.layoutControlItem20,
+            this.layoutControlItem11,
+            this.layoutControlItem1,
+            this.layoutControlItem14});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(457, 102);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.label2;
+            this.layoutControlItem15.Location = new System.Drawing.Point(87, 29);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(99, 24);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem15.TextVisible = false;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.datiNewStart;
+            this.layoutControlItem16.Location = new System.Drawing.Point(186, 29);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(251, 24);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem16.TextVisible = false;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.label1;
+            this.layoutControlItem17.Location = new System.Drawing.Point(87, 53);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(99, 29);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem17.TextVisible = false;
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.ContentVertAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.layoutControlItem20.Control = this.datiNewEnd;
+            this.layoutControlItem20.Location = new System.Drawing.Point(186, 53);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(251, 29);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem20.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.ContentVertAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.layoutControlItem11.Control = this.lookUpEditTimeDK;
+            this.layoutControlItem11.Location = new System.Drawing.Point(87, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(350, 29);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.radioBtnAva;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(87, 29);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.ContentVertAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.layoutControlItem14.Control = this.radioBtnNew;
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 29);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(87, 53);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.layoutControl1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl1.Location = new System.Drawing.Point(2, 2);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(659, 265);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Thông tin lớp tín chỉ";
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.btnAddGV);
+            this.layoutControl1.Controls.Add(this.buttonDelGV);
+            this.layoutControl1.Controls.Add(this.dataGridViewGV);
+            this.layoutControl1.Controls.Add(this.hUYLOPCheckBox);
+            this.layoutControl1.Controls.Add(this.txtMaLTC);
+            this.layoutControl1.Controls.Add(this.txtSoSVTT);
+            this.layoutControl1.Controls.Add(this.txtMaKhoa);
+            this.layoutControl1.Controls.Add(this.txtNhom);
+            this.layoutControl1.Controls.Add(this.txtHocKy);
+            this.layoutControl1.Controls.Add(this.txtNienKhoa);
+            this.layoutControl1.Controls.Add(this.txtMaMonHoc);
+            this.layoutControl1.Controls.Add(this.comboBoxGV);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(2, 23);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(655, 240);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnAddGV
+            // 
+            this.btnAddGV.Enabled = false;
+            this.btnAddGV.Location = new System.Drawing.Point(533, 108);
+            this.btnAddGV.Name = "btnAddGV";
+            this.btnAddGV.Size = new System.Drawing.Size(110, 45);
+            this.btnAddGV.TabIndex = 16;
+            this.btnAddGV.Text = "Thêm";
+            this.btnAddGV.UseVisualStyleBackColor = true;
+            this.btnAddGV.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // buttonDelGV
+            // 
+            this.buttonDelGV.Location = new System.Drawing.Point(533, 157);
+            this.buttonDelGV.Name = "buttonDelGV";
+            this.buttonDelGV.Size = new System.Drawing.Size(110, 71);
+            this.buttonDelGV.TabIndex = 17;
+            this.buttonDelGV.Text = "Xóa";
+            this.buttonDelGV.UseVisualStyleBackColor = true;
+            this.buttonDelGV.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataGridViewGV
+            // 
+            this.dataGridViewGV.AllowUserToAddRows = false;
+            this.dataGridViewGV.AllowUserToDeleteRows = false;
+            this.dataGridViewGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataGridViewGV.Location = new System.Drawing.Point(92, 132);
+            this.dataGridViewGV.MultiSelect = false;
+            this.dataGridViewGV.Name = "dataGridViewGV";
+            this.dataGridViewGV.ReadOnly = true;
+            this.dataGridViewGV.Size = new System.Drawing.Size(437, 96);
+            this.dataGridViewGV.TabIndex = 15;
+            this.dataGridViewGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // hUYLOPCheckBox
+            // 
+            this.hUYLOPCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsLOPTINCHI, "HUYLOP", true));
+            this.hUYLOPCheckBox.Location = new System.Drawing.Point(12, 84);
+            this.hUYLOPCheckBox.Name = "hUYLOPCheckBox";
+            this.hUYLOPCheckBox.Size = new System.Drawing.Size(341, 20);
+            this.hUYLOPCheckBox.TabIndex = 14;
+            this.hUYLOPCheckBox.Text = "Hủy lớp";
+            this.hUYLOPCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // bdsLOPTINCHI
+            // 
+            this.bdsLOPTINCHI.DataMember = "LOPTINCHI";
+            this.bdsLOPTINCHI.DataSource = this.DS;
+            // 
+            // txtMaLTC
+            // 
+            this.txtMaLTC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTINCHI, "MALTC", true));
+            this.txtMaLTC.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtMaLTC.Location = new System.Drawing.Point(437, 84);
+            this.txtMaLTC.MenuManager = this.barManager1;
+            this.txtMaLTC.Name = "txtMaLTC";
+            this.txtMaLTC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMaLTC.Properties.IsFloatValue = false;
+            this.txtMaLTC.Properties.Mask.EditMask = "N00";
+            this.txtMaLTC.Size = new System.Drawing.Size(206, 20);
+            this.txtMaLTC.StyleController = this.layoutControl1;
+            this.txtMaLTC.TabIndex = 13;
+            // 
             // txtSoSVTT
             // 
             this.txtSoSVTT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTINCHI, "SOSVTT", true));
@@ -955,7 +969,8 @@ namespace QLSV_HTC.Forms
             this.comboBoxGV.Properties.DataSource = this.bdsGIANGVIEN;
             this.comboBoxGV.Properties.DisplayMember = "TEN";
             this.comboBoxGV.Properties.KeyMember = "TEN";
-            this.comboBoxGV.Properties.NullText = "";
+            this.comboBoxGV.Properties.NullText = "Chọn giảng viên ";
+            this.comboBoxGV.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.comboBoxGV.Properties.PopupSizeable = false;
             this.comboBoxGV.Properties.ShowHeader = false;
             this.comboBoxGV.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
@@ -1101,6 +1116,11 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem19.Text = "Giảng viên thêm";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(77, 13);
             // 
+            // tHOIGIANDKBindingSource
+            // 
+            this.tHOIGIANDKBindingSource.DataMember = "THOIGIANDK";
+            this.tHOIGIANDKBindingSource.DataSource = this.DS;
+            // 
             // bdsfKLICHHOCLOPTINCHI
             // 
             this.bdsfKLICHHOCLOPTINCHI.DataMember = "FK_LICHHOC_LOPTINCHI";
@@ -1155,13 +1175,13 @@ namespace QLSV_HTC.Forms
             // 
             this.gcLOPTINCHI.DataSource = this.bdsLOPTINCHI;
             this.gcLOPTINCHI.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "FK_DANGKY_LOPTINCHI";
-            gridLevelNode2.RelationName = "FK_DAY_LOPTINCHI";
-            gridLevelNode3.RelationName = "FK_LICHHOC_LOPTINCHI";
+            gridLevelNode4.RelationName = "FK_DANGKY_LOPTINCHI";
+            gridLevelNode5.RelationName = "FK_DAY_LOPTINCHI";
+            gridLevelNode6.RelationName = "FK_LICHHOC_LOPTINCHI";
             this.gcLOPTINCHI.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode2,
-            gridLevelNode3});
+            gridLevelNode4,
+            gridLevelNode5,
+            gridLevelNode6});
             this.gcLOPTINCHI.Location = new System.Drawing.Point(2, 2);
             this.gcLOPTINCHI.MainView = this.gridView1;
             this.gcLOPTINCHI.MenuManager = this.barManager1;
@@ -1264,6 +1284,10 @@ namespace QLSV_HTC.Forms
             this.colMATGDK.Caption = "Mã thời gian đăng ký";
             this.colMATGDK.FieldName = "MATGDK";
             this.colMATGDK.Name = "colMATGDK";
+            this.colMATGDK.OptionsColumn.AllowEdit = false;
+            this.colMATGDK.OptionsColumn.AllowFocus = false;
+            this.colMATGDK.Visible = true;
+            this.colMATGDK.VisibleIndex = 7;
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -1388,38 +1412,6 @@ namespace QLSV_HTC.Forms
             this.lOPTINCHIBindingSource.DataMember = "LOPTINCHI";
             this.lOPTINCHIBindingSource.DataSource = this.DS;
             // 
-            // buttonAddtime
-            // 
-            this.buttonAddtime.Location = new System.Drawing.Point(495, 65);
-            this.buttonAddtime.Name = "buttonAddtime";
-            this.buttonAddtime.Size = new System.Drawing.Size(75, 43);
-            this.buttonAddtime.TabIndex = 1;
-            this.buttonAddtime.Text = "Thêm buổi";
-            this.buttonAddtime.UseVisualStyleBackColor = true;
-            // 
-            // buttonDelTime
-            // 
-            this.buttonDelTime.Location = new System.Drawing.Point(495, 150);
-            this.buttonDelTime.Name = "buttonDelTime";
-            this.buttonDelTime.Size = new System.Drawing.Size(75, 52);
-            this.buttonDelTime.TabIndex = 2;
-            this.buttonDelTime.Text = "Xóa buổi";
-            this.buttonDelTime.UseVisualStyleBackColor = true;
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(26, 87);
-            this.lookUpEdit1.MenuManager = this.barManager1;
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.DataSource = this.tHOIGIANHOCBindingSource;
-            this.lookUpEdit1.Properties.DisplayMember = "MATGH";
-            this.lookUpEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEdit1.Properties.ValueMember = "MATGH";
-            this.lookUpEdit1.Size = new System.Drawing.Size(444, 20);
-            this.lookUpEdit1.TabIndex = 3;
-            // 
             // MoLopTinChiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1440,33 +1432,33 @@ namespace QLSV_HTC.Forms
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTGH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditTimeHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANHOCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTGH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditTimeDK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ngay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datiAvaStart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datiAvaEnd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoSVTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhom.Properties)).EndInit();
@@ -1489,6 +1481,7 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLICHHOCLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLOPTINCHITHOIGIANDK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource3)).EndInit();
@@ -1513,7 +1506,6 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1591,22 +1583,10 @@ namespace QLSV_HTC.Forms
         private System.Windows.Forms.RadioButton radioBtnNew;
         private System.Windows.Forms.RadioButton radioBtnAva;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-        private DevExpress.XtraLayout.LayoutControlItem ngay;
         private System.Windows.Forms.DateTimePicker datiNewEnd;
         private System.Windows.Forms.DateTimePicker datiNewStart;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private DevExpress.XtraLayout.LayoutControlItem datiAvaStart;
-        private DevExpress.XtraLayout.LayoutControlItem datiAvaEnd;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private System.Windows.Forms.BindingSource lICHHOCBindingSource;
         private DSTableAdapters.LICHHOCTableAdapter lICHHOCTableAdapter;
@@ -1624,25 +1604,32 @@ namespace QLSV_HTC.Forms
         private System.Windows.Forms.BindingSource fKDAYLOPTINCHIBindingSource3;
         private System.Windows.Forms.DataGridView dataGridViewGV;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mAGVDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonDelGV;
         private System.Windows.Forms.Button btnAddGV;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraEditors.LookUpEdit comboBoxGV;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-        private DevExpress.XtraGrid.Columns.GridColumn colMATGDK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mALTCDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMATGDK;     
+        private System.Windows.Forms.TextBox textBoxTime;
         private System.Windows.Forms.DataGridView dataGridViewTGH;
         private System.Windows.Forms.DataGridViewTextBoxColumn mATGHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn MALTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn bUOIHOCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tHUDataGridViewTextBoxColumn;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditTimeHoc;
         private System.Windows.Forms.Button buttonDelTime;
         private System.Windows.Forms.Button buttonAddtime;
+        private System.Windows.Forms.Button btnDKTime;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditTimeDK;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private System.Windows.Forms.BindingSource tHOIGIANDKBindingSource1;
+        private System.Windows.Forms.Label label3;
     }
 }
