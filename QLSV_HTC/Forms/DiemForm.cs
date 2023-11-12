@@ -46,10 +46,10 @@ namespace QLSV_HTC.Forms
         {
             try
             {
-       //         gc_DSSV_DANGKY.DataSource = sp_GetBangDiemMonHocBindingSource;
+                gc_DSSV_DANGKY.DataSource = sp_GetBangDiemMonHocBindingSource;
                 maltc = Convert.ToInt32(((DataRowView)bdsLTC[bdsLTC.Position])["MALTC"].ToString());
-             //   this.sp_GetBangDiemMonHocTableAdapter.Connection.ConnectionString = Program.ConnStr;
-                //this.sp_GetBangDiemMonHocTableAdapter.Fill(this.DS.sp_GetBangDiemMonHoc, maltc);
+                this.sp_GetBangDiemMonHocTableAdapter.Connection.ConnectionString = Program.ConnStr;
+                this.sp_GetBangDiemMonHocTableAdapter.Fill(this.DS.sp_GetBangDiemMonHoc, maltc);
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace QLSV_HTC.Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             this.Validate();
-    //        this.sp_GetBangDiemMonHocBindingSource.EndEdit();
+            this.sp_GetBangDiemMonHocBindingSource.EndEdit();
 
             BindingSource bdsTemp = (BindingSource)this.gc_DSSV_DANGKY.DataSource;
 
@@ -87,7 +87,7 @@ namespace QLSV_HTC.Forms
 
             try
             {
-        //        this.sp_GetBangDiemMonHocTableAdapter.sp_GhiDiem(dt);
+                this.sp_GetBangDiemMonHocTableAdapter.sp_GhiDiem(dt);
             }
             catch (Exception ex)
             {
@@ -103,7 +103,7 @@ namespace QLSV_HTC.Forms
         private void sp_GetBangDiemMonHocBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-    //        this.sp_GetBangDiemMonHocBindingSource.EndEdit();
+            this.sp_GetBangDiemMonHocBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.DS);
         }
 
@@ -141,7 +141,7 @@ namespace QLSV_HTC.Forms
                 }
                 else
                 {
-     //               position = sp_GetBangDiemMonHocBindingSource.Position;
+                    position = sp_GetBangDiemMonHocBindingSource.Position;
                     state = true;
                     btnSave.Enabled = btnHuy.Enabled = true;
                 }
@@ -171,7 +171,7 @@ namespace QLSV_HTC.Forms
                     else
                     {
                         e.Value = x;
-         //               position = sp_GetBangDiemMonHocBindingSource.Position;
+                        position = sp_GetBangDiemMonHocBindingSource.Position;
                         state = true;
                         btnSave.Enabled = btnHuy.Enabled = true;
                     }
@@ -184,7 +184,7 @@ namespace QLSV_HTC.Forms
             btnStart_Click(null, null);
             if (position > -1)
             {
-              //  sp_GetBangDiemMonHocBindingSource.Position = position;
+                sp_GetBangDiemMonHocBindingSource.Position = position;
             }
             btnSave.Enabled = btnHuy.Enabled = false;
         }
@@ -209,8 +209,8 @@ namespace QLSV_HTC.Forms
             gc_DSSV_DANGKY.DataSource = null;
             try
             {
-           //     this.sp_GetDS_LTCTableAdapter.Connection.ConnectionString = Program.ConnStr;
-              //  this.sp_GetDS_LTCTableAdapter.Fill(this.DS.sp_GetDS_LTC, txtNienKhoa.Text.Trim(), Convert.ToInt32(txtHocKy.Text.Trim()));
+                this.sp_GetDS_LTCTableAdapter.Connection.ConnectionString = Program.ConnStr;
+                this.sp_GetDS_LTCTableAdapter.Fill(this.DS.sp_GetDS_LTC, txtNienKhoa.Text.Trim(), Convert.ToInt32(txtHocKy.Text.Trim()));
 
                 btnStart.Enabled = bdsLTC.Count > 0;
 

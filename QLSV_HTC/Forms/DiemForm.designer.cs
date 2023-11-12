@@ -66,6 +66,7 @@ namespace QLSV_HTC.Forms
             this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
             this.MONHOCTableAdapter = new QLSV_HTC.DSTableAdapters.MONHOCTableAdapter();
             this.gc_DSSV_DANGKY = new DevExpress.XtraGrid.GridControl();
+            this.sp_GetBangDiemMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMASV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,7 +75,9 @@ namespace QLSV_HTC.Forms
             this.colDIEM_CK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_HM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.sp_GetBangDiemMonHocTableAdapter = new QLSV_HTC.DSTableAdapters.sp_GetBangDiemMonHocTableAdapter();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.sp_GetDS_LTCGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLTC = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,6 +85,7 @@ namespace QLSV_HTC.Forms
             this.colNHOM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.sp_GetDS_LTCTableAdapter = new QLSV_HTC.DSTableAdapters.sp_GetDS_LTCTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -104,8 +108,11 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_DSSV_DANGKY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_GetBangDiemMonHocBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -174,6 +181,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlTop.Size = new System.Drawing.Size(1938, 24);
             // 
             // barDockControlBottom
@@ -182,6 +190,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 809);
             this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1938, 0);
             // 
             // barDockControlLeft
@@ -190,6 +199,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 785);
             // 
             // barDockControlRight
@@ -199,6 +209,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlRight.Location = new System.Drawing.Point(1938, 24);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 785);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             // 
             // barButtonAdd
             // 
@@ -694,14 +705,14 @@ namespace QLSV_HTC.Forms
         private System.Windows.Forms.BindingSource bdsMONHOC;
         private DSTableAdapters.MONHOCTableAdapter MONHOCTableAdapter;
         private DevExpress.XtraGrid.GridControl gc_DSSV_DANGKY;
- //       private System.Windows.Forms.BindingSource sp_GetBangDiemMonHocBindingSource;
+        private System.Windows.Forms.BindingSource sp_GetBangDiemMonHocBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMASV;
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CC;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_GK;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CK;
-   //     private DSTableAdapters.sp_GetBangDiemMonHocTableAdapter sp_GetBangDiemMonHocTableAdapter;
+        private DSTableAdapters.sp_GetBangDiemMonHocTableAdapter sp_GetBangDiemMonHocTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraGrid.Columns.GridColumn colDIEM_HM;
@@ -709,8 +720,8 @@ namespace QLSV_HTC.Forms
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private System.Windows.Forms.BindingSource bdsLTC;
-    //   private DSTableAdapters.sp_GetDS_LTCTableAdapter sp_GetDS_LTCTableAdapter;
-  //      private DevExpress.XtraGrid.GridControl sp_GetDS_LTCGridControl;
+        private DSTableAdapters.sp_GetDS_LTCTableAdapter sp_GetDS_LTCTableAdapter;
+        private DevExpress.XtraGrid.GridControl sp_GetDS_LTCGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colMALTC;
         private DevExpress.XtraGrid.Columns.GridColumn colTENMH;
