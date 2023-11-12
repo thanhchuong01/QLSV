@@ -66,7 +66,6 @@ namespace QLSV_HTC.Forms
             this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
             this.MONHOCTableAdapter = new QLSV_HTC.DSTableAdapters.MONHOCTableAdapter();
             this.gc_DSSV_DANGKY = new DevExpress.XtraGrid.GridControl();
-            this.sp_GetBangDiemMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMASV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,10 +73,12 @@ namespace QLSV_HTC.Forms
             this.colDIEM_GK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_CK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_HM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sp_GetBangDiemMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.sp_GetBangDiemMonHocTableAdapter = new QLSV_HTC.DSTableAdapters.sp_GetBangDiemMonHocTableAdapter();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.sp_GetDS_LTCGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bdsLTC = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -109,10 +110,10 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.gc_DSSV_DANGKY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_GetBangDiemMonHocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_GetDS_LTCGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -208,8 +209,8 @@ namespace QLSV_HTC.Forms
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1938, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 785);
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 785);
             // 
             // barButtonAdd
             // 
@@ -549,6 +550,10 @@ namespace QLSV_HTC.Forms
             this.colDIEM_HM.Visible = true;
             this.colDIEM_HM.VisibleIndex = 5;
             // 
+            // sp_GetBangDiemMonHocTableAdapter
+            // 
+            this.sp_GetBangDiemMonHocTableAdapter.ClearBeforeFill = true;
+            // 
             // groupControl4
             // 
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -558,6 +563,21 @@ namespace QLSV_HTC.Forms
             this.groupControl4.TabIndex = 18;
             this.groupControl4.Text = "Danh sách lớp tín chỉ";
             this.groupControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl4_Paint);
+            // 
+            // sp_GetDS_LTCGridControl
+            // 
+            this.sp_GetDS_LTCGridControl.Location = new System.Drawing.Point(0, 0);
+            this.sp_GetDS_LTCGridControl.MainView = this.gridView3;
+            this.sp_GetDS_LTCGridControl.Name = "sp_GetDS_LTCGridControl";
+            this.sp_GetDS_LTCGridControl.Size = new System.Drawing.Size(400, 200);
+            this.sp_GetDS_LTCGridControl.TabIndex = 0;
+            this.sp_GetDS_LTCGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.sp_GetDS_LTCGridControl;
+            this.gridView3.Name = "gridView3";
             // 
             // bdsLTC
             // 
@@ -632,6 +652,10 @@ namespace QLSV_HTC.Forms
             this.groupControl5.Text = "Danh sách điểm sinh viên";
             this.groupControl5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl5_Paint);
             // 
+            // sp_GetDS_LTCTableAdapter
+            // 
+            this.sp_GetDS_LTCTableAdapter.ClearBeforeFill = true;
+            // 
             // DiemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,8 +694,11 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_DSSV_DANGKY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_GetBangDiemMonHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_GetDS_LTCGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -737,5 +764,6 @@ namespace QLSV_HTC.Forms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }
