@@ -83,9 +83,7 @@ namespace QLSV_HTC.Forms
             this.Controls.Add(this.btnDeny);
             this.Controls.Add(this.btnConfirm);
             this.Name = "ChuyenSVForm";
-            this.Text = "ChuyenSVForm";
-            this.Load += new System.EventHandler(this.ChuyenSVForm_Load);
-            this.FormClosed += ChuyenSVForm_Closed;
+            this.Text = "ChuyenSVForm";        
             ((System.ComponentModel.ISupportInitialize)(this.txtEditCHUYENLOP.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

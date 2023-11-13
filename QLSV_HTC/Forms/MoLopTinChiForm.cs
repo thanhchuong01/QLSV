@@ -86,7 +86,7 @@ namespace QLSV_HTC.Forms
                 return false;
             }
 
-            if (dataGridViewGV.RowCount == 0)
+            if (gridViewGV.RowCount == 0)
             {
                 XtraMessageBox.Show("Phải phân công giảng viên dạy!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -282,6 +282,9 @@ namespace QLSV_HTC.Forms
             this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.ConnStr;
             // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
             this.LOPTINCHITableAdapter.Fill(this.DS.LOPTINCHI);
+
+            this.sp_GetGVLTCTableAdapter.Fill(this.DS.sp_GetGVLTC);
+
             if (position > -1)
             {
                 bdsLOPTINCHI.Position = position;
@@ -292,6 +295,10 @@ namespace QLSV_HTC.Forms
 
         private void MoLopTinChiForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DS.sp_GetAllTGH' table. You can move, or remove it, as needed.
+            this.sp_GetAllTGHTableAdapter.Fill(this.DS.sp_GetAllTGH);
+            // TODO: This line of code loads data into the 'DS.sp_GetGVLTC' table. You can move, or remove it, as needed.
+            this.sp_GetGVLTCTableAdapter.Fill(this.DS.sp_GetGVLTC);
             // TODO: This line of code loads data into the 'DS.THOIGIANHOC' table. You can move, or remove it, as needed.
             this.tHOIGIANHOCTableAdapter.Fill(this.DS.THOIGIANHOC);
             // TODO: This line of code loads data into the 'DS.LICHHOC' table. You can move, or remove it, as needed.
@@ -381,21 +388,24 @@ namespace QLSV_HTC.Forms
             // get data ngay dang ky
             MoLopTinChiForm.ngaydk.ResetBindings(true);
             MoLopTinChiForm.ngaydk.Filter = string.Format("MATGDK = {0}", LopTinChiData.MaTGDK.ToString());
-            
+
+            // filter value of ds GV and time register MH
+            gridViewGV.SetAutoFilterValue(colMALTC, LopTinChiData.MaLTC, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
+            gridViewTGH.SetAutoFilterValue(colMALTC1, LopTinChiData.MaLTC, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
+
 
             // get data ds giang vien 
             MoLopTinChiForm.dsgv.ResetBindings(true);
             MoLopTinChiForm.dsgv.RemoveFilter();
             MoLopTinChiForm.dsgv.Filter = string.Format("MALTC = {0}", LopTinChiData.MaLTC.ToString());
-            this.dataGridViewGV.DataSource = MoLopTinChiForm.dsgv.DataSource;
+         
 
 
             // get thoi gian hoc               
             MoLopTinChiForm.tghoc.ResetBindings(true);
             MoLopTinChiForm.tghoc.RemoveFilter();
             MoLopTinChiForm.tghoc.Filter = string.Format("MALTC = {0}", this.LopTinChiData.MaLTC.ToString());
-            this.dataGridViewTGH.DataSource = MoLopTinChiForm.tghoc.DataSource;
-
+         
             // get thoi gian dang ky
             load_DateTimeDK();
         }
@@ -418,12 +428,6 @@ namespace QLSV_HTC.Forms
                 }
         }
 
-      
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -437,36 +441,18 @@ namespace QLSV_HTC.Forms
            
             this.comboBoxGV.EditValue = null;
             this.btnAddGV.Enabled = false;
-            dataGridViewGV.Refresh();
-
-            Utils.eventDataChanged();
+            LoadData();
+            //Utils.eventDataChanged();
 
             this.dAYTableAdapter.Connection.ConnectionString = Program.ConnStr;
             // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
             this.dAYTableAdapter.Fill(this.DS.DAY);
-            this.dataGridViewGV.DataSource = null;
-            this.dataGridViewGV.DataSource = MoLopTinChiForm.dsgv.DataSource;
+         //   this.dataGridViewGV.DataSource = null;
+         //   this.dataGridViewGV.DataSource = MoLopTinChiForm.dsgv.DataSource;
             MoLopTinChiForm.dsgv.ResetBindings(true);          
             MoLopTinChiForm.dsgv.RemoveFilter();
             MoLopTinChiForm.dsgv.Filter = string.Format("MALTC = {0}", LopTinChiData.MaLTC.ToString());
-            
-
-            var dataSource = dataGridViewGV.DataSource;
-
-            // Assuming the data source is a DataTable
-            if (dataSource is DataTable dataTable)
-            {
-                // Iterate over the rows of the DataTable
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    // Iterate over the columns of each row
-                    foreach (DataColumn column in dataTable.Columns)
-                    {
-                        // Output the value to the console
-                        Console.WriteLine(row[column]);
-                    }
-                }
-            }
+                                 
             
 
         }
@@ -554,7 +540,7 @@ namespace QLSV_HTC.Forms
             MoLopTinChiForm.tghoc.ResetBindings(true);
             MoLopTinChiForm.tghoc.RemoveFilter();
             MoLopTinChiForm.tghoc.Filter = string.Format("MALTC = {0}", this.LopTinChiData.MaLTC.ToString());
-            this.dataGridViewTGH.DataSource = MoLopTinChiForm.tghoc.DataSource;
+          
 
         }
 

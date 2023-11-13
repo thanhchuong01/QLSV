@@ -107,7 +107,13 @@ namespace QLSV_HTC.Forms
                 // Lấy thông tin của user đang login
                 string sqlQuery = "exec sp_DANGNHAP'" + Program.AuthLogin + "'";
                 Program.MyReader = Program.ExecSqlDataReader(sqlQuery);
-                if (Program.MyReader == null) return;
+                if (Program.MyReader == null)
+                {
+                    Program.Conn.Close();
+                    return;
+                } 
+                    
+                    
                 Program.MyReader.Read();
           
                 try

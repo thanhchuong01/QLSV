@@ -733,6 +733,10 @@ namespace QLSV_HTC.Forms
             this.colDANGHIHOC.Visible = true;
             this.colDANGHIHOC.VisibleIndex = 6;
             // 
+            // bds_DangKy
+            // 
+            this.bds_DangKy.DataMember = "FK_DANGKY_SINHVIEN";
+            this.bds_DangKy.DataSource = this.bdsSINHVIEN;
             // colMACN
             // 
             this.colMACN.Caption = "Chuyên ngành";

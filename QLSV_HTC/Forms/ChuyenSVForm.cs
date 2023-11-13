@@ -60,7 +60,7 @@ namespace QLSV_HTC.Forms
             if (validateInput() == true)
             {
                 ChuyenSVForm.chuyen = true;
-                Console.WriteLine(ChuyenSVForm.chuyen);
+               
                 this.Close();
             }
             

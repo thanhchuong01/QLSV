@@ -232,7 +232,7 @@ namespace QLSV_HTC.Forms
 
                 if (state == "edit")
                 {
-                    undoStack.Push(string.Format("UPDATE SINHVIEN SET [HO] =N'{0}',[TEN] = N'{1}',[PHAI] = {2},[DIACHI] = N'{3}',[NGAYSINH] = '{4}',[DANGHIHOC] = {5} WHERE [MASV] = N'{6}'", sv.ho, sv.ten, sv.phai, sv.diaChi, sv.ngaySinh, sv.daNghiHoc, sv.maSV));
+                    undoStack.Push(string.Format("UPDATE SINHVIEN SET [HO] =N'{0}',[TEN] = N'{1}',[PHAI] = {2},[DIACHI] = N'{3}',[NGAYSINH] = '{4}',[DANGHIHOC] = {5}, [MALOP] = '{6}' WHERE [MASV] = N'{7}'", sv.ho, sv.ten, sv.phai, sv.diaChi, sv.ngaySinh, sv.daNghiHoc, sv.maLop, sv.maSV));
                 }
             }
             catch (Exception ex)
@@ -358,7 +358,7 @@ namespace QLSV_HTC.Forms
                         this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
                         this.bdsSINHVIEN.ResetCurrentItem();
 
-                        undoStack.Push(string.Format("INSERT INTO SINHVIEN([MASV],[HO],[TEN],[PHAI],[DIACHI],[NGAYSINH],[MALOP],[DANGHIHOC],[PASSWORD])VALUES(N'{0}',N'{1}',N'{2}',{3},N'{4}','{5}','{6}',{7},N'123456')", sv.maSV, sv.ho, sv.ten, sv.phai, sv.diaChi, sv.ngaySinh, sv.maLop, sv.daNghiHoc));
+                        undoStack.Push(string.Format("INSERT INTO SINHVIEN([MASV],[HO],[TEN],[PHAI],[DIACHI],[NGAYSINH],[MALOP],[DANGHIHOC],[MACN],[PASSWORD])VALUES(N'{0}',N'{1}',N'{2}',{3},N'{4}','{5}','{6}',{7},'{8}',N'123456')", sv.maSV, sv.ho, sv.ten, sv.phai, sv.diaChi, sv.ngaySinh, sv.maLop, sv.daNghiHoc, sv.maCN));
                     }
                     catch (Exception ex)
                     {
@@ -414,18 +414,25 @@ namespace QLSV_HTC.Forms
         private void btnChuyenLop_Click(object sender, EventArgs e)
         {
             var formChuyenSV = new ChuyenSVForm(sv.maSV);
-            formChuyenSV.Show();
+            formChuyenSV.ShowDialog();
             SinhVienForm.stateChildForm = true;
             Console.WriteLine(ChuyenSVForm.chuyen);
-            while (formChuyenSV.IsDisposed);
+            
             if (ChuyenSVForm.chuyen)
+                try 
                 {   
                     position = bdsSINHVIEN.Position;
                     position2 = lOPBindingSource.Position;
                     ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["MALOP"] = ChuyenSVForm.malop;
+                    bdsSINHVIEN.EndEdit();
+                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.ConnStr;
+                    this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
+                    this.bdsSINHVIEN.ResetCurrentItem();
                     MessageBox.Show("Chuyển lớp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    undoStack.Push(string.Format("UPDATE SINHVIEN SET [MALOP] ='{0}' WHERE [MASV] = '{1}'", sv.maLop , TextBox_MaSV.Text));
+
                 }
-                else return;
+                catch { }
             }
 
         
