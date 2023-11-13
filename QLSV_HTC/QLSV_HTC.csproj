@@ -48,11 +48,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
@@ -62,21 +66,27 @@
     <Reference Include="DevExpress.Data.Desktop.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -136,6 +146,12 @@
     <Compile Include="FormRP\InDSSV.designer.cs">
       <DependentUpon>InDSSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRP\InDSSVLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRP\InDSSVLop.Designer.cs">
+      <DependentUpon>InDSSVLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRP\InPhieuDiemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +163,12 @@
     </Compile>
     <Compile Include="Forms\AddLoginForm.designer.cs">
       <DependentUpon>AddLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChuyenSVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChuyenSVForm.Designer.cs">
+      <DependentUpon>ChuyenSVForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DangKyLTCForm.cs">
       <SubType>Form</SubType>
@@ -222,6 +244,12 @@
     <Compile Include="Reports\InDSLTC_RP.designer.cs">
       <DependentUpon>InDSLTC_RP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\InDSSVLop_RP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InDSSVLop_RP.Designer.cs">
+      <DependentUpon>InDSSVLop_RP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\InDSSV_RP.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -247,11 +275,17 @@
     <EmbeddedResource Include="FormRP\InDSSV.resx">
       <DependentUpon>InDSSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRP\InDSSVLop.resx">
+      <DependentUpon>InDSSVLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRP\InPhieuDiemForm.resx">
       <DependentUpon>InPhieuDiemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLoginForm.resx">
       <DependentUpon>AddLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChuyenSVForm.resx">
+      <DependentUpon>ChuyenSVForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DangKyLTCForm.resx">
       <DependentUpon>DangKyLTCForm.cs</DependentUpon>
@@ -303,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\InDSLTC_RP.resx">
       <DependentUpon>InDSLTC_RP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InDSSVLop_RP.resx">
+      <DependentUpon>InDSSVLop_RP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\InDSSV_RP.resx">
       <DependentUpon>InDSSV_RP.cs</DependentUpon>

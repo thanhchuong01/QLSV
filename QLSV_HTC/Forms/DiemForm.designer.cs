@@ -66,6 +66,7 @@ namespace QLSV_HTC.Forms
             this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
             this.MONHOCTableAdapter = new QLSV_HTC.DSTableAdapters.MONHOCTableAdapter();
             this.gc_DSSV_DANGKY = new DevExpress.XtraGrid.GridControl();
+            this.sp_GetBangDiemMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMASV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,12 +74,10 @@ namespace QLSV_HTC.Forms
             this.colDIEM_GK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_CK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIEM_HM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.sp_GetBangDiemMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.sp_GetBangDiemMonHocTableAdapter = new QLSV_HTC.DSTableAdapters.sp_GetBangDiemMonHocTableAdapter();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.sp_GetDS_LTCGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bdsLTC = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -108,12 +107,12 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_DSSV_DANGKY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_GetBangDiemMonHocBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sp_GetDS_LTCGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -182,8 +181,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1938, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1735, 24);
             // 
             // barDockControlBottom
             // 
@@ -191,8 +189,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 809);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1938, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1735, 0);
             // 
             // barDockControlLeft
             // 
@@ -200,16 +197,14 @@ namespace QLSV_HTC.Forms
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 785);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1938, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1735, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 785);
             // 
             // barButtonAdd
@@ -264,7 +259,7 @@ namespace QLSV_HTC.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 24);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1938, 103);
+            this.panelControl1.Size = new System.Drawing.Size(1735, 103);
             this.panelControl1.TabIndex = 11;
             // 
             // panelControl3
@@ -274,7 +269,7 @@ namespace QLSV_HTC.Forms
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(2, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1934, 101);
+            this.panelControl3.Size = new System.Drawing.Size(1731, 101);
             this.panelControl3.TabIndex = 2;
             // 
             // groupControl1
@@ -285,7 +280,7 @@ namespace QLSV_HTC.Forms
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(394, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1538, 97);
+            this.groupControl1.Size = new System.Drawing.Size(1335, 97);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Bảng điều khiển";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -467,6 +462,7 @@ namespace QLSV_HTC.Forms
             // 
             // gc_DSSV_DANGKY
             // 
+            this.gc_DSSV_DANGKY.DataSource = this.sp_GetBangDiemMonHocBindingSource;
             this.gc_DSSV_DANGKY.Location = new System.Drawing.Point(-1, 25);
             this.gc_DSSV_DANGKY.MainView = this.gridView1;
             this.gc_DSSV_DANGKY.MenuManager = this.barManager1;
@@ -477,6 +473,12 @@ namespace QLSV_HTC.Forms
             this.gc_DSSV_DANGKY.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gc_DSSV_DANGKY.Click += new System.EventHandler(this.gc_DSSV_DANGKY_Click);
+            // 
+            // sp_GetBangDiemMonHocBindingSource
+            // 
+            this.sp_GetBangDiemMonHocBindingSource.DataMember = "sp_GetBangDiemMonHoc";
+            this.sp_GetBangDiemMonHocBindingSource.DataSource = this.DS;
+            this.sp_GetBangDiemMonHocBindingSource.CurrentChanged += new System.EventHandler(this.sp_GetBangDiemMonHocBindingSource_CurrentChanged);
             // 
             // gridView1
             // 
@@ -516,7 +518,7 @@ namespace QLSV_HTC.Forms
             // colDIEM_CC
             // 
             this.colDIEM_CC.Caption = "Điểm chuyên cần";
-            this.colDIEM_CC.FieldName = "DIEM_CC";
+            this.colDIEM_CC.FieldName = "DIEMCC";
             this.colDIEM_CC.Name = "colDIEM_CC";
             this.colDIEM_CC.Visible = true;
             this.colDIEM_CC.VisibleIndex = 2;
@@ -524,7 +526,7 @@ namespace QLSV_HTC.Forms
             // colDIEM_GK
             // 
             this.colDIEM_GK.Caption = "Điểm giữa kỳ";
-            this.colDIEM_GK.FieldName = "DIEM_GK";
+            this.colDIEM_GK.FieldName = "DIEMGK";
             this.colDIEM_GK.Name = "colDIEM_GK";
             this.colDIEM_GK.Visible = true;
             this.colDIEM_GK.VisibleIndex = 3;
@@ -532,7 +534,7 @@ namespace QLSV_HTC.Forms
             // colDIEM_CK
             // 
             this.colDIEM_CK.Caption = "Điểm cuối kỳ";
-            this.colDIEM_CK.FieldName = "DIEM_CK";
+            this.colDIEM_CK.FieldName = "DIEMCK";
             this.colDIEM_CK.Name = "colDIEM_CK";
             this.colDIEM_CK.Visible = true;
             this.colDIEM_CK.VisibleIndex = 4;
@@ -545,7 +547,7 @@ namespace QLSV_HTC.Forms
             this.colDIEM_HM.OptionsColumn.AllowEdit = false;
             this.colDIEM_HM.OptionsColumn.AllowFocus = false;
             this.colDIEM_HM.ShowUnboundExpressionMenu = true;
-            this.colDIEM_HM.UnboundExpression = "Round([DIEM_CC] * 0.1 + [DIEM_GK] * 0.3 + [DIEM_CK] * 0.6, 1)";
+            this.colDIEM_HM.UnboundExpression = "Round([DIEMCC] * 0.1 + [DIEMGK] * 0.3 + [DIEMCK] * 0.6, 1)";
             this.colDIEM_HM.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colDIEM_HM.Visible = true;
             this.colDIEM_HM.VisibleIndex = 5;
@@ -556,33 +558,33 @@ namespace QLSV_HTC.Forms
             // 
             // groupControl4
             // 
+            this.groupControl4.Controls.Add(this.sp_GetDS_LTCGridControl);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl4.Location = new System.Drawing.Point(0, 127);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1938, 294);
+            this.groupControl4.Size = new System.Drawing.Size(1735, 294);
             this.groupControl4.TabIndex = 18;
             this.groupControl4.Text = "Danh sách lớp tín chỉ";
             this.groupControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl4_Paint);
             // 
             // sp_GetDS_LTCGridControl
             // 
-            this.sp_GetDS_LTCGridControl.Location = new System.Drawing.Point(0, 0);
-            this.sp_GetDS_LTCGridControl.MainView = this.gridView3;
+            this.sp_GetDS_LTCGridControl.DataSource = this.bdsLTC;
+            this.sp_GetDS_LTCGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sp_GetDS_LTCGridControl.Location = new System.Drawing.Point(2, 23);
+            this.sp_GetDS_LTCGridControl.MainView = this.gridView2;
+            this.sp_GetDS_LTCGridControl.MenuManager = this.barManager1;
             this.sp_GetDS_LTCGridControl.Name = "sp_GetDS_LTCGridControl";
-            this.sp_GetDS_LTCGridControl.Size = new System.Drawing.Size(400, 200);
+            this.sp_GetDS_LTCGridControl.Size = new System.Drawing.Size(1731, 269);
             this.sp_GetDS_LTCGridControl.TabIndex = 0;
             this.sp_GetDS_LTCGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            // 
-            // gridView3
-            // 
-            this.gridView3.GridControl = this.sp_GetDS_LTCGridControl;
-            this.gridView3.Name = "gridView3";
+            this.gridView2});
+            this.sp_GetDS_LTCGridControl.Click += new System.EventHandler(this.sp_GetDS_LTCGridControl_Click);
             // 
             // bdsLTC
             // 
+            this.bdsLTC.DataMember = "sp_GetDS_LTC";
             this.bdsLTC.DataSource = this.DS;
-            this.bdsLTC.Position = 0;
             // 
             // gridView2
             // 
@@ -591,56 +593,48 @@ namespace QLSV_HTC.Forms
             this.colTENMH,
             this.colNHOM,
             this.colHOTEN1});
-            this.gridView2.DetailHeight = 431;
+            this.gridView2.GridControl = this.sp_GetDS_LTCGridControl;
             this.gridView2.Name = "gridView2";
             // 
             // colMALTC
             // 
             this.colMALTC.Caption = "Mã lớp tín chỉ";
             this.colMALTC.FieldName = "MALTC";
-            this.colMALTC.MinWidth = 23;
             this.colMALTC.Name = "colMALTC";
             this.colMALTC.OptionsColumn.AllowEdit = false;
             this.colMALTC.OptionsColumn.AllowFocus = false;
             this.colMALTC.Visible = true;
             this.colMALTC.VisibleIndex = 0;
-            this.colMALTC.Width = 87;
             // 
             // colTENMH
             // 
             this.colTENMH.Caption = "Tên môn học";
             this.colTENMH.FieldName = "TENMH";
-            this.colTENMH.MinWidth = 23;
             this.colTENMH.Name = "colTENMH";
             this.colTENMH.OptionsColumn.AllowEdit = false;
             this.colTENMH.OptionsColumn.AllowFocus = false;
             this.colTENMH.Visible = true;
             this.colTENMH.VisibleIndex = 1;
-            this.colTENMH.Width = 87;
             // 
             // colNHOM
             // 
             this.colNHOM.Caption = "Nhóm";
             this.colNHOM.FieldName = "NHOM";
-            this.colNHOM.MinWidth = 23;
             this.colNHOM.Name = "colNHOM";
             this.colNHOM.OptionsColumn.AllowEdit = false;
             this.colNHOM.OptionsColumn.AllowFocus = false;
             this.colNHOM.Visible = true;
             this.colNHOM.VisibleIndex = 2;
-            this.colNHOM.Width = 87;
             // 
             // colHOTEN1
             // 
             this.colHOTEN1.Caption = "Họ tên giảng viên";
             this.colHOTEN1.FieldName = "HOTEN";
-            this.colHOTEN1.MinWidth = 23;
             this.colHOTEN1.Name = "colHOTEN1";
             this.colHOTEN1.OptionsColumn.AllowEdit = false;
             this.colHOTEN1.OptionsColumn.AllowFocus = false;
             this.colHOTEN1.Visible = true;
             this.colHOTEN1.VisibleIndex = 3;
-            this.colHOTEN1.Width = 87;
             // 
             // groupControl5
             // 
@@ -661,7 +655,7 @@ namespace QLSV_HTC.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1955, 751);
+            this.ClientSize = new System.Drawing.Size(1752, 751);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.panelControl1);
@@ -693,12 +687,12 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_DSSV_DANGKY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_GetBangDiemMonHocBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sp_GetDS_LTCGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -764,6 +758,5 @@ namespace QLSV_HTC.Forms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }

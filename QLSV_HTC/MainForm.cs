@@ -144,6 +144,11 @@ namespace QLSV_HTC
         {
             ShowMdiChildren(typeof(GiangVienForm));
         }
+
+        private void btnDSSVLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(InDSSVLop));
+        }
     } 
     
 }

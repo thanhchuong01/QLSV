@@ -71,9 +71,9 @@ namespace QLSV_HTC.Forms
             DataTable dt = new DataTable();
             dt.Columns.Add("MALTC", typeof(int));
             dt.Columns.Add("MASV", typeof(string));
-            dt.Columns.Add("DIEMCC", typeof(int));
-            dt.Columns.Add("DIEMGK", typeof(float));
-            dt.Columns.Add("DIEMCK", typeof(float));
+            dt.Columns.Add("DIEM_CC", typeof(int));
+            dt.Columns.Add("DIEM_GK", typeof(float));
+            dt.Columns.Add("DIEM_CK", typeof(float));
 
             for (int i = 0; i < bdsTemp.Count; i++)
             {

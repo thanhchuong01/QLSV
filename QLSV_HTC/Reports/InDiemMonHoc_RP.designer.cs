@@ -541,7 +541,7 @@ namespace QLSV_HTC.Reports
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.tableCell13.BorderWidth = 1F;
             this.tableCell13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEM_CC]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEMCC]")});
             this.tableCell13.Name = "tableCell13";
             this.tableCell13.StyleName = "DetailData1";
             this.tableCell13.StylePriority.UseBorderColor = false;
@@ -558,7 +558,7 @@ namespace QLSV_HTC.Reports
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.tableCell14.BorderWidth = 1F;
             this.tableCell14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEM_GK]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEMGK]")});
             this.tableCell14.Name = "tableCell14";
             this.tableCell14.StyleName = "DetailData1";
             this.tableCell14.StylePriority.UseBorderColor = false;
@@ -575,7 +575,7 @@ namespace QLSV_HTC.Reports
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.tableCell15.BorderWidth = 1F;
             this.tableCell15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEM_CK]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEMCK]")});
             this.tableCell15.Name = "tableCell15";
             this.tableCell15.StyleName = "DetailData1";
             this.tableCell15.StylePriority.UseBorderColor = false;
@@ -592,7 +592,7 @@ namespace QLSV_HTC.Reports
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.tableCell16.BorderWidth = 1F;
             this.tableCell16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEM_HM]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DIEMHM]")});
             this.tableCell16.Name = "tableCell16";
             this.tableCell16.StyleName = "DetailData1";
             this.tableCell16.StylePriority.UseBorderColor = false;

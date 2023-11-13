@@ -116,6 +116,7 @@ namespace QLSV_HTC.Forms
             this.TextBox_MaSV = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cHUYENNGANHTableAdapter = new QLSV_HTC.DSTableAdapters.CHUYENNGANHTableAdapter();
+            this.btnChuyenLop = new System.Windows.Forms.Button();
             mASVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
@@ -800,6 +801,7 @@ namespace QLSV_HTC.Forms
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.btnChuyenLop);
             this.panelControl3.Controls.Add(this.label1);
             this.panelControl3.Controls.Add(this.comboBox1);
             this.panelControl3.Controls.Add(pASSWORDLabel);
@@ -949,6 +951,16 @@ namespace QLSV_HTC.Forms
             // 
             this.cHUYENNGANHTableAdapter.ClearBeforeFill = true;
             // 
+            // btnChuyenLop
+            // 
+            this.btnChuyenLop.Location = new System.Drawing.Point(121, 353);
+            this.btnChuyenLop.Name = "btnChuyenLop";
+            this.btnChuyenLop.Size = new System.Drawing.Size(121, 38);
+            this.btnChuyenLop.TabIndex = 21;
+            this.btnChuyenLop.Text = "Chuyển lớp";
+            this.btnChuyenLop.UseVisualStyleBackColor = true;
+            this.btnChuyenLop.Click += new System.EventHandler(this.btnChuyenLop_Click);
+            // 
             // SinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1071,5 +1083,6 @@ namespace QLSV_HTC.Forms
         private System.Windows.Forms.BindingSource cHUYENNGANHBindingSource;
         private DSTableAdapters.CHUYENNGANHTableAdapter cHUYENNGANHTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
+        private System.Windows.Forms.Button btnChuyenLop;
     }
 }

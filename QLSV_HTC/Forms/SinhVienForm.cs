@@ -15,6 +15,7 @@ namespace QLSV_HTC.Forms
 {
     public partial class SinhVienForm : DevExpress.XtraEditors.XtraForm
     {
+        public static bool stateChildForm = false;
         private int position = -1;
         private int position2 = -1;
         private string state = "";
@@ -409,5 +410,26 @@ namespace QLSV_HTC.Forms
         {
 
         }
+
+        private void btnChuyenLop_Click(object sender, EventArgs e)
+        {
+            var formChuyenSV = new ChuyenSVForm(sv.maSV);
+            formChuyenSV.Show();
+            SinhVienForm.stateChildForm = true;
+            Console.WriteLine(ChuyenSVForm.chuyen);
+            while (formChuyenSV.IsDisposed);
+            if (ChuyenSVForm.chuyen)
+                {   
+                    position = bdsSINHVIEN.Position;
+                    position2 = lOPBindingSource.Position;
+                    ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["MALOP"] = ChuyenSVForm.malop;
+                    MessageBox.Show("Chuyển lớp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else return;
+            }
+
+        
+
+
     }
 }

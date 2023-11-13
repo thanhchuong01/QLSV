@@ -65,6 +65,7 @@ namespace QLSV_HTC
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.btnDSSVLop = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
@@ -92,9 +93,10 @@ namespace QLSV_HTC
             this.barBtnDiem,
             this.barBtnLop,
             this.barBtnDKLTC,
-            this.barBtnGV});
+            this.barBtnGV,
+            this.btnDSSVLop});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 22;
+            this.ribbonControl1.MaxItemId = 23;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -137,8 +139,8 @@ namespace QLSV_HTC
             // 
             this.BtnInDSLTC.Caption = "Danh sách lớp tín chỉ";
             this.BtnInDSLTC.Id = 5;
-            this.BtnInDSLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnInDSL.ImageOptions.Image")));
-            this.BtnInDSLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnInDSL.ImageOptions.LargeImage")));
+            this.BtnInDSLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnInDSLTC.ImageOptions.Image")));
+            this.BtnInDSLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnInDSLTC.ImageOptions.LargeImage")));
             this.BtnInDSLTC.LargeWidth = 80;
             this.BtnInDSLTC.Name = "BtnInDSLTC";
             this.BtnInDSLTC.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -320,6 +322,7 @@ namespace QLSV_HTC
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInPhieuDiem);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInBDMH);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnInBDTK);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDSSVLop);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "In ấn";
             // 
@@ -382,6 +385,14 @@ namespace QLSV_HTC
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
+            // btnDSSVLop
+            // 
+            this.btnDSSVLop.Caption = "Danh sách sinh viên Lớp";
+            this.btnDSSVLop.Id = 22;
+            this.btnDSSVLop.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDSSVLop.ImageOptions.SvgImage")));
+            this.btnDSSVLop.Name = "btnDSSVLop";
+            this.btnDSSVLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSSVLop_ItemClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +454,7 @@ namespace QLSV_HTC
         private DevExpress.XtraBars.BarButtonItem barBtnLop;
         private DevExpress.XtraBars.BarButtonItem barBtnDKLTC;
         private DevExpress.XtraBars.BarButtonItem barBtnGV;
+        private DevExpress.XtraBars.BarButtonItem btnDSSVLop;
     }
 }
 
