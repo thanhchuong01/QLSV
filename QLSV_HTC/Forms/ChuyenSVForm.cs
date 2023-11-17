@@ -58,7 +58,7 @@ namespace QLSV_HTC.Forms
         {
             ChuyenSVForm.chuyen = false;
             ChuyenSVForm.malop = this.txtEditCHUYENLOP.Text.Trim();
-            String cmd = "Select MALOP from LOP Where MALOP='" + malop + "'";
+            String cmd = "Select MALOP FROM LINK0.QLSV_HTC.dbo.LOP Where MALOP='" + malop + "'";
             SqlDataReader dr = Program.ExecSqlDataReader(cmd);
 
             if (!dr.Read())
@@ -108,10 +108,11 @@ namespace QLSV_HTC.Forms
                 Console.WriteLine("KHAC SITE");
                 string loptc = string.Format("EXEC SP_XoaDkLtcSV {0}", masvInput);
                 SqlDataReader dsltc = Program.ExecSqlDataReader(loptc);
-                dsltc.Read();
-                Console.WriteLine(dsltc.GetString(0), dsltc.GetString(1), dsltc.GetString(2), dsltc.GetString(3), dsltc.GetString(4));
-                string undo = string.Format("INSER INTO DANGKY (MALTC, MASV, DIEMCC, DIEMGK, DIEMCC, HUYDK) VALUES ({0}, {1}, {2}, {3}, {4}, 0)", dsltc.GetString(0), dsltc.GetString(1), dsltc.GetString(2), dsltc.GetString(3), dsltc.GetString(4));
-                SinhVienForm.undoStack.Push(undo);
+                dsltc.Close();
+                //dsltc.Read();
+                //Console.WriteLine(dsltc.GetString(0), dsltc.GetString(1), dsltc.GetString(2), dsltc.GetString(3), dsltc.GetString(4));
+                //string undo = string.Format("INSER INTO DANGKY (MALTC, MASV, DIEMCC, DIEMGK, DIEMCC, HUYDK) VALUES ({0}, {1}, {2}, {3}, {4}, 0)", dsltc.GetString(0), dsltc.GetString(1), dsltc.GetString(2), dsltc.GetString(3), dsltc.GetString(4));
+                //SinhVienForm.undoStack.Push(undo);
                 string chuyenSV = string.Format("EXEC SP_ChuyenLopSV N'{0}', N'{1}'", masvInput, malop);
                 int kq = Program.ExecSqlNonQuery(chuyenSV);
                 ChuyenSVForm.chuyen = true;
