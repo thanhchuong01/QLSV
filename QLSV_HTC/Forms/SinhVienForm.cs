@@ -19,7 +19,7 @@ namespace QLSV_HTC.Forms
         private int position = -1;
         private int position2 = -1;
         private string state = "";
-        Stack<string> undoStack = new Stack<string>();
+        public static Stack<string> undoStack = new Stack<string>();
 
         private SinhVienClass sv = null;
         public SinhVienForm()
@@ -413,7 +413,7 @@ namespace QLSV_HTC.Forms
 
         private void btnChuyenLop_Click(object sender, EventArgs e)
         {
-            var formChuyenSV = new ChuyenSVForm(sv.maSV);
+            var formChuyenSV = new ChuyenSVForm(sv.maSV, sv.maLop);
             formChuyenSV.ShowDialog();
             SinhVienForm.stateChildForm = true;
             Console.WriteLine(ChuyenSVForm.chuyen);
@@ -421,16 +421,9 @@ namespace QLSV_HTC.Forms
             if (ChuyenSVForm.chuyen)
                 try 
                 {   
-                    position = bdsSINHVIEN.Position;
-                    position2 = lOPBindingSource.Position;
-                    ((DataRowView)bdsSINHVIEN[bdsSINHVIEN.Position])["MALOP"] = ChuyenSVForm.malop;
-                    bdsSINHVIEN.EndEdit();
-                    this.sINHVIENTableAdapter.Connection.ConnectionString = Program.ConnStr;
-                    this.sINHVIENTableAdapter.Update(this.dS.SINHVIEN);
-                    this.bdsSINHVIEN.ResetCurrentItem();
+                   
                     MessageBox.Show("Chuyển lớp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     undoStack.Push(string.Format("UPDATE SINHVIEN SET [MALOP] ='{0}' WHERE [MASV] = '{1}'", sv.maLop , TextBox_MaSV.Text));
-
                 }
                 catch { }
             }

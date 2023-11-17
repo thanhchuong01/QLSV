@@ -38,7 +38,7 @@ namespace QLSV_HTC.Forms
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(111, 137);
+            this.btnConfirm.Location = new System.Drawing.Point(109, 96);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(173, 27);
             this.btnConfirm.TabIndex = 1;
@@ -48,7 +48,7 @@ namespace QLSV_HTC.Forms
             // 
             // btnDeny
             // 
-            this.btnDeny.Location = new System.Drawing.Point(343, 137);
+            this.btnDeny.Location = new System.Drawing.Point(337, 96);
             this.btnDeny.Name = "btnDeny";
             this.btnDeny.Size = new System.Drawing.Size(146, 27);
             this.btnDeny.TabIndex = 2;
@@ -59,7 +59,7 @@ namespace QLSV_HTC.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 50);
+            this.label1.Location = new System.Drawing.Point(92, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 3;
@@ -67,7 +67,7 @@ namespace QLSV_HTC.Forms
             // 
             // txtEditCHUYENLOP
             // 
-            this.txtEditCHUYENLOP.Location = new System.Drawing.Point(95, 88);
+            this.txtEditCHUYENLOP.Location = new System.Drawing.Point(95, 47);
             this.txtEditCHUYENLOP.Name = "txtEditCHUYENLOP";
             this.txtEditCHUYENLOP.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEditCHUYENLOP.Size = new System.Drawing.Size(410, 20);
@@ -77,16 +77,19 @@ namespace QLSV_HTC.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 260);
+            this.ClientSize = new System.Drawing.Size(587, 164);
             this.Controls.Add(this.txtEditCHUYENLOP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeny);
             this.Controls.Add(this.btnConfirm);
+            this.Location = new System.Drawing.Point(361, 255);
             this.Name = "ChuyenSVForm";
-            this.Text = "ChuyenSVForm";        
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Chuyển sinh viên";
             ((System.ComponentModel.ISupportInitialize)(this.txtEditCHUYENLOP.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

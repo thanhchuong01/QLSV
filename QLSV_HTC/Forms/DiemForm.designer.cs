@@ -181,7 +181,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1735, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1938, 24);
             // 
             // barDockControlBottom
             // 
@@ -189,7 +189,7 @@ namespace QLSV_HTC.Forms
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 809);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1735, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1938, 0);
             // 
             // barDockControlLeft
             // 
@@ -203,7 +203,7 @@ namespace QLSV_HTC.Forms
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1735, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1938, 24);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 785);
             // 
@@ -259,7 +259,7 @@ namespace QLSV_HTC.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 24);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1735, 103);
+            this.panelControl1.Size = new System.Drawing.Size(1938, 103);
             this.panelControl1.TabIndex = 11;
             // 
             // panelControl3
@@ -269,7 +269,7 @@ namespace QLSV_HTC.Forms
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(2, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1731, 101);
+            this.panelControl3.Size = new System.Drawing.Size(1934, 101);
             this.panelControl3.TabIndex = 2;
             // 
             // groupControl1
@@ -280,7 +280,7 @@ namespace QLSV_HTC.Forms
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(394, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1335, 97);
+            this.groupControl1.Size = new System.Drawing.Size(1538, 97);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Bảng điều khiển";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -562,7 +562,7 @@ namespace QLSV_HTC.Forms
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl4.Location = new System.Drawing.Point(0, 127);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1735, 294);
+            this.groupControl4.Size = new System.Drawing.Size(1938, 294);
             this.groupControl4.TabIndex = 18;
             this.groupControl4.Text = "Danh sách lớp tín chỉ";
             this.groupControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl4_Paint);
@@ -575,7 +575,7 @@ namespace QLSV_HTC.Forms
             this.sp_GetDS_LTCGridControl.MainView = this.gridView2;
             this.sp_GetDS_LTCGridControl.MenuManager = this.barManager1;
             this.sp_GetDS_LTCGridControl.Name = "sp_GetDS_LTCGridControl";
-            this.sp_GetDS_LTCGridControl.Size = new System.Drawing.Size(1731, 269);
+            this.sp_GetDS_LTCGridControl.Size = new System.Drawing.Size(1934, 269);
             this.sp_GetDS_LTCGridControl.TabIndex = 0;
             this.sp_GetDS_LTCGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -655,7 +655,7 @@ namespace QLSV_HTC.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1752, 751);
+            this.ClientSize = new System.Drawing.Size(1955, 751);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.panelControl1);

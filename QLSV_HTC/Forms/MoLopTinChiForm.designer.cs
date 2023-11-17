@@ -34,13 +34,13 @@ namespace QLSV_HTC.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MoLopTinChiForm));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlTGH = new DevExpress.XtraGrid.GridControl();
-            this.spGetAllTGHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.spGetAllTGHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.DS = new QLSV_HTC.DS();
             this.gridViewTGH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALTC1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,6 +87,8 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtMaTGDK = new DevExpress.XtraEditors.SpinEdit();
+            this.bdsLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
             this.gridControlGV = new DevExpress.XtraGrid.GridControl();
             this.spGetGVLTCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewGV = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -96,7 +98,6 @@ namespace QLSV_HTC.Forms
             this.btnAddGV = new System.Windows.Forms.Button();
             this.buttonDelGV = new System.Windows.Forms.Button();
             this.hUYLOPCheckBox = new System.Windows.Forms.CheckBox();
-            this.bdsLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
             this.txtMaLTC = new DevExpress.XtraEditors.SpinEdit();
             this.txtSoSVTT = new DevExpress.XtraEditors.SpinEdit();
             this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
@@ -120,6 +121,8 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.spinTGDK = new DevExpress.XtraLayout.LayoutControlItem();
+            this.spGetAllTGHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tHOIGIANDKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bdsfKLICHHOCLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
             this.bdsfKLOPTINCHITHOIGIANDK = new System.Windows.Forms.BindingSource(this.components);
@@ -163,13 +166,12 @@ namespace QLSV_HTC.Forms
             this.lOPTINCHIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sp_GetGVLTCTableAdapter = new QLSV_HTC.DSTableAdapters.sp_GetGVLTCTableAdapter();
             this.sp_GetAllTGHTableAdapter = new QLSV_HTC.DSTableAdapters.sp_GetAllTGHTableAdapter();
-            this.spGetAllTGHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTGH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTGH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -193,10 +195,11 @@ namespace QLSV_HTC.Forms
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaTGDK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spGetGVLTCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoSVTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
@@ -220,6 +223,8 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinTGDK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLICHHOCLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLOPTINCHITHOIGIANDK)).BeginInit();
@@ -244,7 +249,6 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -286,10 +290,10 @@ namespace QLSV_HTC.Forms
             this.gridControlTGH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTGH});
             // 
-            // spGetAllTGHBindingSource
+            // spGetAllTGHBindingSource1
             // 
-            this.spGetAllTGHBindingSource.DataMember = "sp_GetAllTGH";
-            this.spGetAllTGHBindingSource.DataSource = this.DS;
+            this.spGetAllTGHBindingSource1.DataMember = "sp_GetAllTGH";
+            this.spGetAllTGHBindingSource1.DataSource = this.DS;
             // 
             // DS
             // 
@@ -489,6 +493,7 @@ namespace QLSV_HTC.Forms
             this.lookUpEditTimeHoc.Properties.ValueMember = "MATGH";
             this.lookUpEditTimeHoc.Size = new System.Drawing.Size(444, 20);
             this.lookUpEditTimeHoc.TabIndex = 3;
+            this.lookUpEditTimeHoc.EditValueChanged += new System.EventHandler(this.lookUpEditTimeHoc_EditValueChanged);
             // 
             // tHOIGIANHOCBindingSource
             // 
@@ -507,6 +512,7 @@ namespace QLSV_HTC.Forms
             // 
             // buttonAddtime
             // 
+            this.buttonAddtime.Enabled = false;
             this.buttonAddtime.Location = new System.Drawing.Point(495, 65);
             this.buttonAddtime.Name = "buttonAddtime";
             this.buttonAddtime.Size = new System.Drawing.Size(75, 43);
@@ -544,7 +550,7 @@ namespace QLSV_HTC.Forms
             this.btnDKTime.TabIndex = 3;
             this.btnDKTime.Text = "Đăng ký thời gian";
             this.btnDKTime.UseVisualStyleBackColor = true;
-            this.btnDKTime.Click += new System.EventHandler(this.button1_Click);
+            this.btnDKTime.Click += new System.EventHandler(this.btnDKTime_Click);
             // 
             // textBoxTime
             // 
@@ -749,6 +755,7 @@ namespace QLSV_HTC.Forms
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txtMaTGDK);
             this.layoutControl1.Controls.Add(this.gridControlGV);
             this.layoutControl1.Controls.Add(this.btnAddGV);
             this.layoutControl1.Controls.Add(this.buttonDelGV);
@@ -768,6 +775,30 @@ namespace QLSV_HTC.Forms
             this.layoutControl1.Size = new System.Drawing.Size(655, 240);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtMaTGDK
+            // 
+            this.txtMaTGDK.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTINCHI, "MATGDK", true));
+            this.txtMaTGDK.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtMaTGDK.Location = new System.Drawing.Point(437, 84);
+            this.txtMaTGDK.MenuManager = this.barManager1;
+            this.txtMaTGDK.Name = "txtMaTGDK";
+            this.txtMaTGDK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMaTGDK.Properties.IsFloatValue = false;
+            this.txtMaTGDK.Properties.Mask.EditMask = "N00";
+            this.txtMaTGDK.Size = new System.Drawing.Size(58, 20);
+            this.txtMaTGDK.StyleController = this.layoutControl1;
+            this.txtMaTGDK.TabIndex = 20;
+            // 
+            // bdsLOPTINCHI
+            // 
+            this.bdsLOPTINCHI.DataMember = "LOPTINCHI";
+            this.bdsLOPTINCHI.DataSource = this.DS;
             // 
             // gridControlGV
             // 
@@ -795,6 +826,7 @@ namespace QLSV_HTC.Forms
             this.TEN});
             this.gridViewGV.GridControl = this.gridControlGV;
             this.gridViewGV.Name = "gridViewGV";
+            this.gridViewGV.OptionsBehavior.ReadOnly = true;
             this.gridViewGV.OptionsCustomization.AllowFilter = false;
             this.gridViewGV.OptionsFilter.AllowAutoFilterConditionChange = DevExpress.Utils.DefaultBoolean.False;
             this.gridViewGV.OptionsFilter.AllowFilterEditor = false;
@@ -814,6 +846,7 @@ namespace QLSV_HTC.Forms
             this.colMAGV.Caption = "Mã Giảng viên";
             this.colMAGV.FieldName = "MAGV";
             this.colMAGV.Name = "colMAGV";
+            this.colMAGV.OptionsColumn.AllowEdit = false;
             this.colMAGV.OptionsEditForm.Caption = "Mã giảng viên";
             this.colMAGV.Visible = true;
             this.colMAGV.VisibleIndex = 0;
@@ -823,6 +856,7 @@ namespace QLSV_HTC.Forms
             this.TEN.Caption = "Tên";
             this.TEN.FieldName = "TEN";
             this.TEN.Name = "TEN";
+            this.TEN.OptionsColumn.AllowEdit = false;
             this.TEN.OptionsEditForm.Caption = "Tên";
             this.TEN.Visible = true;
             this.TEN.VisibleIndex = 1;
@@ -836,7 +870,7 @@ namespace QLSV_HTC.Forms
             this.btnAddGV.TabIndex = 16;
             this.btnAddGV.Text = "Thêm";
             this.btnAddGV.UseVisualStyleBackColor = true;
-            this.btnAddGV.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAddGV.Click += new System.EventHandler(this.btnAddGV_Click);
             // 
             // buttonDelGV
             // 
@@ -846,7 +880,7 @@ namespace QLSV_HTC.Forms
             this.buttonDelGV.TabIndex = 17;
             this.buttonDelGV.Text = "Xóa";
             this.buttonDelGV.UseVisualStyleBackColor = true;
-            this.buttonDelGV.Click += new System.EventHandler(this.button2_Click);
+            this.buttonDelGV.Click += new System.EventHandler(this.btnDelGV_Click);
             // 
             // hUYLOPCheckBox
             // 
@@ -858,11 +892,6 @@ namespace QLSV_HTC.Forms
             this.hUYLOPCheckBox.Text = "Hủy lớp";
             this.hUYLOPCheckBox.UseVisualStyleBackColor = true;
             // 
-            // bdsLOPTINCHI
-            // 
-            this.bdsLOPTINCHI.DataMember = "LOPTINCHI";
-            this.bdsLOPTINCHI.DataSource = this.DS;
-            // 
             // txtMaLTC
             // 
             this.txtMaLTC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTINCHI, "MALTC", true));
@@ -871,14 +900,14 @@ namespace QLSV_HTC.Forms
             0,
             0,
             0});
-            this.txtMaLTC.Location = new System.Drawing.Point(437, 84);
+            this.txtMaLTC.Location = new System.Drawing.Point(579, 84);
             this.txtMaLTC.MenuManager = this.barManager1;
             this.txtMaLTC.Name = "txtMaLTC";
             this.txtMaLTC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtMaLTC.Properties.IsFloatValue = false;
             this.txtMaLTC.Properties.Mask.EditMask = "N00";
-            this.txtMaLTC.Size = new System.Drawing.Size(206, 20);
+            this.txtMaLTC.Size = new System.Drawing.Size(64, 20);
             this.txtMaLTC.StyleController = this.layoutControl1;
             this.txtMaLTC.TabIndex = 13;
             // 
@@ -1061,7 +1090,8 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem13,
             this.layoutControlItem12,
             this.layoutControlItem19,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.spinTGDK});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(655, 240);
             this.Root.TextVisible = false;
@@ -1115,9 +1145,9 @@ namespace QLSV_HTC.Forms
             // 
             this.layoutControlItem10.Control = this.txtMaLTC;
             this.layoutControlItem10.Enabled = false;
-            this.layoutControlItem10.Location = new System.Drawing.Point(345, 72);
+            this.layoutControlItem10.Location = new System.Drawing.Point(487, 72);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(290, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem10.Text = "Mã lớp tín chỉ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(77, 13);
             // 
@@ -1175,6 +1205,20 @@ namespace QLSV_HTC.Forms
             this.layoutControlItem6.Size = new System.Drawing.Size(521, 100);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
+            // 
+            // spinTGDK
+            // 
+            this.spinTGDK.Control = this.txtMaTGDK;
+            this.spinTGDK.Location = new System.Drawing.Point(345, 72);
+            this.spinTGDK.Name = "spinTGDK";
+            this.spinTGDK.Size = new System.Drawing.Size(142, 24);
+            this.spinTGDK.Text = "Mã TGDK";
+            this.spinTGDK.TextSize = new System.Drawing.Size(77, 13);
+            // 
+            // spGetAllTGHBindingSource
+            // 
+            this.spGetAllTGHBindingSource.DataMember = "sp_GetAllTGH";
+            this.spGetAllTGHBindingSource.DataSource = this.DS;
             // 
             // tHOIGIANDKBindingSource
             // 
@@ -1235,13 +1279,13 @@ namespace QLSV_HTC.Forms
             // 
             this.gcLOPTINCHI.DataSource = this.bdsLOPTINCHI;
             this.gcLOPTINCHI.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "FK_DANGKY_LOPTINCHI";
-            gridLevelNode2.RelationName = "FK_DAY_LOPTINCHI";
-            gridLevelNode3.RelationName = "FK_LICHHOC_LOPTINCHI";
+            gridLevelNode4.RelationName = "FK_DANGKY_LOPTINCHI";
+            gridLevelNode5.RelationName = "FK_DAY_LOPTINCHI";
+            gridLevelNode6.RelationName = "FK_LICHHOC_LOPTINCHI";
             this.gcLOPTINCHI.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode2,
-            gridLevelNode3});
+            gridLevelNode4,
+            gridLevelNode5,
+            gridLevelNode6});
             this.gcLOPTINCHI.Location = new System.Drawing.Point(2, 2);
             this.gcLOPTINCHI.MainView = this.gridView1;
             this.gcLOPTINCHI.MenuManager = this.barManager1;
@@ -1480,11 +1524,6 @@ namespace QLSV_HTC.Forms
             // 
             this.sp_GetAllTGHTableAdapter.ClearBeforeFill = true;
             // 
-            // spGetAllTGHBindingSource1
-            // 
-            this.spGetAllTGHBindingSource1.DataMember = "sp_GetAllTGH";
-            this.spGetAllTGHBindingSource1.DataSource = this.DS;
-            // 
             // MoLopTinChiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1506,7 +1545,7 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTGH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTGH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -1531,10 +1570,11 @@ namespace QLSV_HTC.Forms
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaTGDK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spGetGVLTCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoSVTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
@@ -1558,6 +1598,8 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinTGDK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOIGIANDKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLICHHOCLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsfKLOPTINCHITHOIGIANDK)).EndInit();
@@ -1583,7 +1625,6 @@ namespace QLSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDAYLOPTINCHIBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPTINCHIBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spGetAllTGHBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1718,5 +1759,7 @@ namespace QLSV_HTC.Forms
         private DevExpress.XtraGrid.Columns.GridColumn colMATGH;
         private DevExpress.XtraGrid.Columns.GridColumn colTHOIGIAN;
         private System.Windows.Forms.BindingSource spGetAllTGHBindingSource1;
+        private DevExpress.XtraEditors.SpinEdit txtMaTGDK;
+        private DevExpress.XtraLayout.LayoutControlItem spinTGDK;
     }
 }

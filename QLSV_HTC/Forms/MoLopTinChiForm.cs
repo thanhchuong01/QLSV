@@ -16,6 +16,7 @@ namespace QLSV_HTC.Forms
     public partial class MoLopTinChiForm : DevExpress.XtraEditors.XtraForm
     {
         private int position = -1;
+        private int position2 = -1;
         private string state;
         private List<string> mgv = new List<string>();
         private LopTinChiClass LopTinChiData = null;
@@ -125,6 +126,13 @@ namespace QLSV_HTC.Forms
             {
                 XtraMessageBox.Show("Mã khoa không được bỏ trống!", "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (gridViewTGH.RowCount == 0)
+            {
+                XtraMessageBox.Show("Thời gian học không được bỏ trống!", "Lỗi",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -283,7 +291,16 @@ namespace QLSV_HTC.Forms
             // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
             this.LOPTINCHITableAdapter.Fill(this.DS.LOPTINCHI);
 
+            this.lICHHOCTableAdapter.Connection.ConnectionString = Program.ConnStr;
+            this.lICHHOCTableAdapter.Fill(this.DS.LICHHOC);                      
+
+            this.dAYTableAdapter.Connection.ConnectionString = Program.ConnStr;
+            // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
+            this.dAYTableAdapter.Fill(this.DS.DAY);
+            //   this.dataGridViewGV.DataSource = null;
+
             this.sp_GetGVLTCTableAdapter.Fill(this.DS.sp_GetGVLTC);
+            this.sp_GetAllTGHTableAdapter.Fill(this.DS.sp_GetAllTGH);
 
             if (position > -1)
             {
@@ -291,14 +308,14 @@ namespace QLSV_HTC.Forms
             }
 
             barButtonEdit.Enabled = barButtonDelete.Enabled = bdsLOPTINCHI.Count > 0;
+
+            gridViewGV.SetAutoFilterValue(colMALTC, txtMaLTC.Text, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
+            gridViewTGH.SetAutoFilterValue(colMALTC1, txtMaLTC.Text, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
         }
 
         private void MoLopTinChiForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DS.sp_GetAllTGH' table. You can move, or remove it, as needed.
-            this.sp_GetAllTGHTableAdapter.Fill(this.DS.sp_GetAllTGH);
-            // TODO: This line of code loads data into the 'DS.sp_GetGVLTC' table. You can move, or remove it, as needed.
-            this.sp_GetGVLTCTableAdapter.Fill(this.DS.sp_GetGVLTC);
+       
             // TODO: This line of code loads data into the 'DS.THOIGIANHOC' table. You can move, or remove it, as needed.
             this.tHOIGIANHOCTableAdapter.Fill(this.DS.THOIGIANHOC);
             // TODO: This line of code loads data into the 'DS.LICHHOC' table. You can move, or remove it, as needed.
@@ -307,8 +324,10 @@ namespace QLSV_HTC.Forms
             this.tHOIGIANDKTableAdapter.Fill(this.DS.THOIGIANDK);
             // TODO: This line of code loads data into the 'DS.DAY' table. You can move, or remove it, as needed.
             this.dAYTableAdapter.Fill(this.DS.DAY);
-            MoLopTinChiForm.dsgv.DataSource = this.dAYBindingSource;
-            MoLopTinChiForm.ngaydk.DataSource = this.tHOIGIANDKBindingSource;
+           // TODO: This line of code loads data into the 'DS.sp_GetAllTGH' table. You can move, or remove it, as needed.
+            this.sp_GetAllTGHTableAdapter.Fill(this.DS.sp_GetAllTGH);
+            // TODO: This line of code loads data into the 'DS.sp_GetGVLTC' table. You can move, or remove it, as needed.
+            this.sp_GetGVLTCTableAdapter.Fill(this.DS.sp_GetGVLTC);  
           //  MoLopTinChiForm.tghoc.DataSource = this.tHOIGIANHOCBindingSource;
 
             //if (Program.AuthGroup == "PGV")
@@ -332,6 +351,9 @@ namespace QLSV_HTC.Forms
             {
                 LoadData();
             }
+
+            gridViewGV.SetAutoFilterValue(colMALTC, txtMaLTC.Text, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
+            gridViewTGH.SetAutoFilterValue(colMALTC1, txtMaLTC.Text, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
 
         }
 
@@ -367,20 +389,9 @@ namespace QLSV_HTC.Forms
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             try
-            {
-                
-                int focusedRowHandle = e.FocusedRowHandle;
-                object cellValue = gridView1.GetRowCellValue(focusedRowHandle, "MATGDK");
-                Console.WriteLine(cellValue);
-                string cellData = "";
-                if (cellValue != null)
-                {
-                    // Assuming the column contains string data
-                    cellData = cellValue.ToString();
-              //      Console.WriteLine(cellData);
-                }
+            {                            
 
-                LopTinChiData = new LopTinChiClass(Convert.ToInt32(txtMaLTC.Text), txtNienKhoa.Text.Trim(), txtMaMonHoc.EditValue.ToString().Trim(), txtMaKhoa.Text.Trim(), Convert.ToInt32(txtHocKy.Text), Convert.ToInt32(txtNhom.Text), Convert.ToInt32(txtSoSVTT.Text), hUYLOPCheckBox.Checked, Convert.ToInt32(cellData));
+                LopTinChiData = new LopTinChiClass(Convert.ToInt32(txtMaLTC.Text), txtNienKhoa.Text.Trim(), txtMaMonHoc.EditValue.ToString().Trim(), txtMaKhoa.Text.Trim(), Convert.ToInt32(txtHocKy.Text), Convert.ToInt32(txtNhom.Text), Convert.ToInt32(txtSoSVTT.Text), hUYLOPCheckBox.Checked, Convert.ToInt32(txtMaTGDK.Text));
               //  Console.WriteLine(cellData);
             }
             catch { }
@@ -390,10 +401,10 @@ namespace QLSV_HTC.Forms
             MoLopTinChiForm.ngaydk.Filter = string.Format("MATGDK = {0}", LopTinChiData.MaTGDK.ToString());
 
             // filter value of ds GV and time register MH
-            gridViewGV.SetAutoFilterValue(colMALTC, LopTinChiData.MaLTC, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
-            gridViewTGH.SetAutoFilterValue(colMALTC1, LopTinChiData.MaLTC, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
+            gridViewGV.SetAutoFilterValue(colMALTC, txtMaLTC.Text, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
+            gridViewTGH.SetAutoFilterValue(colMALTC1, txtMaLTC.Text, DevExpress.XtraGrid.Columns.AutoFilterCondition.Equals);
 
-
+            
             // get data ds giang vien 
             MoLopTinChiForm.dsgv.ResetBindings(true);
             MoLopTinChiForm.dsgv.RemoveFilter();
@@ -429,42 +440,35 @@ namespace QLSV_HTC.Forms
         }
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAddGV_Click(object sender, EventArgs e)
         {
             var magv = comboBoxGV.EditValue.ToString().Trim();
             if (magv == null) return;
             string query = string.Format("INSERT DAY (MALTC, MAGV) VALUES( {0}, N'{1}' )  ",Convert.ToInt32(this.txtMaLTC.Text), magv );
             var check = Program.ExecSqlNonQuery(query);
            
-            //XtraMessageBox.Show("magv: "+magv +"  maltc: "+ this.txtMaLTC.Text.ToString() + "check:"+check.ToString());
-            //dataGridViewGV.Fill
-           
+       
             this.comboBoxGV.EditValue = null;
             this.btnAddGV.Enabled = false;
-            LoadData();
-            //Utils.eventDataChanged();
 
-            this.dAYTableAdapter.Connection.ConnectionString = Program.ConnStr;
-            // TODO: This line of code loads data into the 'dS.MONHOC' table. You can move, or remove it, as needed.
-            this.dAYTableAdapter.Fill(this.DS.DAY);
-         //   this.dataGridViewGV.DataSource = null;
-         //   this.dataGridViewGV.DataSource = MoLopTinChiForm.dsgv.DataSource;
-            MoLopTinChiForm.dsgv.ResetBindings(true);          
-            MoLopTinChiForm.dsgv.RemoveFilter();
-            MoLopTinChiForm.dsgv.Filter = string.Format("MALTC = {0}", LopTinChiData.MaLTC.ToString());
-                                 
-            
+    
+            LoadData();
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDelGV_Click(object sender, EventArgs e)
         {
             if (XtraMessageBox.Show("Bạn có thực sự muốn xóa giảng viên này?", "Xác nhận.", MessageBoxButtons.OKCancel) == DialogResult.OK) { 
-                position = dAYBindingSource.Position;
-                dAYBindingSource.RemoveCurrent();
-                this.dAYTableAdapter.Connection.ConnectionString = Program.ConnStr;
-                this.dAYTableAdapter.Update(this.DS.DAY);
-                this.dAYBindingSource.ResetCurrentItem();
+                position2 = spGetGVLTCBindingSource.Position;
+                int maltc = Convert.ToInt32(((DataRowView)spGetGVLTCBindingSource[spGetGVLTCBindingSource.Position])["MALTC"].ToString());
+                string magv = (((DataRowView)spGetGVLTCBindingSource[spGetGVLTCBindingSource.Position])["MAGV"].ToString());
+
+                Console.WriteLine(maltc + " " + magv);
+                undoStack.Push(string.Format("INSERT DAY (MALTC, MAGV) VALUES ({0}, N'{1}' )", maltc, magv));
+                string query = string.Format("DELETE FROM DAY WHERE MALTC = {0} AND MAGV = N'{1}' ", maltc, magv);
+                var check = Program.ExecSqlNonQuery(query);
+                
+                LoadData();
             }
         }
 
@@ -478,7 +482,7 @@ namespace QLSV_HTC.Forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDKTime_Click(object sender, EventArgs e)
         {
             if (XtraMessageBox.Show("Lưu thời gian đăng ký ?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
@@ -494,7 +498,6 @@ namespace QLSV_HTC.Forms
                     string query = string.Format("INSERT THOIGIANDK (NGAYBDDK, NGAYKTDK) VALUES( N'{0}', N'{1}' )  ", startDate, endDate);
                     int check = Program.ExecSqlNonQuery(query);
 
-                    Utils.eventDataChanged();
 
                     if (check == 0)
                     {
@@ -525,30 +528,39 @@ namespace QLSV_HTC.Forms
             string newMatgh = this.lookUpEditTimeHoc.SelectedText.ToString();
             var addNewMathh = Program.ExecSqlNonQuery(string.Format("INSERT LICHHOC (MALTC, MATGH) VALUES ({0}, {1})", this.LopTinChiData.MaLTC, newMatgh));
             Console.WriteLine(addNewMathh);
-            Utils.eventDataChanged();
+            
             if (addNewMathh == 0)
             {
                 Console.WriteLine("THem xong");
                 this.lookUpEditTimeHoc.Text = "";
+                this.buttonAddtime.Enabled = false;
             }
-            DataTable dt = new DataTable();
-            //gọi Sql và trả về dưới dạng datatable
-            dt = Program.ExecSqlDataTable("SELECT MALTC, LICHHOC.MATGH, BUOIHOC, THU FROM LICHHOC, THOIGIANHOC WHERE LICHHOC.MATGH = THOIGIANHOC.MATGH");
 
-            // cất dt vào biến toàn cục tghoc
-            MoLopTinChiForm.tghoc.DataSource = dt;
-            MoLopTinChiForm.tghoc.ResetBindings(true);
-            MoLopTinChiForm.tghoc.RemoveFilter();
-            MoLopTinChiForm.tghoc.Filter = string.Format("MALTC = {0}", this.LopTinChiData.MaLTC.ToString());
-          
+            LoadData();
 
         }
 
         private void buttonDelTime_Click(object sender, EventArgs e)
         {
-            position = tghoc.Position;
-            tghoc.RemoveCurrent();
-            
+            if (XtraMessageBox.Show("Bạn có thực sự muốn xóa buổi học này?", "Xác nhận.", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                position2 = spGetAllTGHBindingSource.Position;
+                int maltc = Convert.ToInt32(((DataRowView)spGetAllTGHBindingSource[spGetAllTGHBindingSource.Position])["MALTC"].ToString());
+                int matgh = Convert.ToInt32(((DataRowView)spGetAllTGHBindingSource[spGetAllTGHBindingSource.Position])["MATGH"].ToString());
+
+                Console.WriteLine(maltc + " " + matgh);
+                undoStack.Push(string.Format("INSERT LICHHOC (MALTC, MATGH) VALUES ({0}, {1} )", maltc, matgh));
+                string query = string.Format("DELETE FROM LICHHOC WHERE MALTC = {0} AND MATGH = {1}", maltc, matgh);
+                var check = Program.ExecSqlNonQuery(query);
+
+                LoadData();
+
+            }
+        }
+
+        private void lookUpEditTimeHoc_EditValueChanged(object sender, EventArgs e)
+        {
+            this.buttonAddtime.Enabled = true;
         }
     }
 }
