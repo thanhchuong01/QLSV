@@ -1,5 +1,6 @@
 ﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
+using DevExpress.Utils.OAuth;
 using DevExpress.XtraEditors;
 using QLSV_HTC.Class;
 using QLSV_HTC.Forms;
@@ -9,6 +10,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 
 namespace QLSV_HTC
 {
@@ -120,44 +122,6 @@ namespace QLSV_HTC
                 return null;
             }
            
-        }
-
-        public static int ExecSqlNonQueryInt(string strlenh)
-        {
-            SqlCommand Sqlcmd = new SqlCommand(strlenh, Conn);
-            Sqlcmd.CommandType = CommandType.Text;
-            Sqlcmd.CommandTimeout = 600; // 10 phut
-            if (Conn.State == ConnectionState.Closed) Conn.Open();
-            try
-            {
-                //Sqlcmd.ExecuteNonQuery();
-                /** 
-                 SqlParameter returnP = Sqlcmd.Parameters.Add("ReturnValue", System.Data.SqlDbType.Int);
-                 returnP.Direction = System.Data.ParameterDirection.ReturnValue;
-
-                 Sqlcmd.ExecuteScalar();
-                 int result = (int)returnP.Value;
-                 Console.WriteLine(result);
-                 **/
-
-                //SqlParameter param = new SqlParameter();
-                var param = Sqlcmd.Parameters.Add("Return Value", SqlDbType.Int);
-                param.Direction = ParameterDirection.ReturnValue;
-
-                Sqlcmd.ExecuteNonQuery();
-                Console.WriteLine(param.Value);
-
-                Conn.Close();
-
-                return 0;
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine(strlenh);
-                XtraMessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Conn.Close();
-                return ex.State;
-            }
         }
 
         // tải về cho phép xem xóa sửa ==> tốc độ tải chậm hơn cái ở trên
