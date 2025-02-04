@@ -10,7 +10,8 @@ The Student Management System is a C# application designed to manage student inf
 - **Update Student**: Modify existing student information as needed.
 - **Delete Student**: Remove student records from the system.
 - **View Students**: Retrieve and display a list of all students.
-- **Search Functionality**: Quickly find specific student records using search criteria.
+- **Create report**: Retrieve and display score, list students of class based on lessons, class code.
+- **Input score**: Input score of class, type score on UI, and input all into the database.  
 
 ## Technologies Used
 
