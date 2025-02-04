@@ -23,7 +23,7 @@ The Student Management System is a C# application designed to manage student inf
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/student-management-system.git
+   git clone [https://github.com/yourusername/student-management-system.git](https://github.com/thanhchuong01/QLSV.git)
 2. Open the project in Visual Studio.
 3. Ensure you have the necessary dependencies installed.
 4. Run the application.
